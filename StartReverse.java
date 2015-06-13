@@ -5,7 +5,7 @@ public class StartReverse {
 
 	public static void main(String[] args) {
 
-	String str = "à1áâãä åæç!è";
+	String str = "Ğ°1Ğ±Ğ²Ğ³Ğ´ ĞµĞ¶Ğ·!Ğ¸";
 	
 	ReverseString stroka = new ReverseString();
 	String reversed = stroka.getReversed(str);
