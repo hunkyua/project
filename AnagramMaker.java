@@ -45,7 +45,13 @@ public class AnagramMaker {
 			for (int j = 0; j < result.length; j++) {
 				reversedInput += (result[j]);
 			}
-			reversedInput += (" ");
+			if (i == inputArray.length -1){
+				  reversedInput += "";
+			}else{
+				reversedInput += " ";
+			}
+
+			 
 		}
 		return reversedInput;
 	}
