@@ -5,6 +5,7 @@ public class Anagrammer {
  public static void main(String[] args) {
   Scanner scn = new Scanner(System.in);
   String str = scn.nextLine();
+  scn.close();
   String strnew = "";
   String strold = str;
    String[]strs = str.split(" "); // разворачиваем строку (по словам), создаем новую строку
