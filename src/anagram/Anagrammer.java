@@ -1,3 +1,4 @@
+package anagram;
 
 import java.util.Scanner;
 

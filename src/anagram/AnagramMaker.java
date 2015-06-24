@@ -1,4 +1,4 @@
-package ru.yandex.op.ua;
+package anagram;
 
 public class AnagramMaker {
 	public static char[] result;

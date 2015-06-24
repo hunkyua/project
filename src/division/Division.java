@@ -1,4 +1,7 @@
+package division;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Division {
     static int divisionFigureIndex = 0;
@@ -40,14 +43,9 @@ public class Division {
         return resultParameters;
     }
 
-    public void printDivision(String division, int divider){
-
-        String out = "  " + division + " |" + divider;
-        System.out.println(out);
-       
-
+    public List<String> printDivision(String division, int divider){
         String divisionResult = "";
-        ArrayList<String> stringsToOutput = new ArrayList<String>();
+        List<String> stringsToOutput = new ArrayList<String>();
 
         int [] nums=new int[division.length()];
         for (int i = 0; i < nums.length; i++) {
@@ -75,14 +73,6 @@ public class Division {
         stringsToOutput.remove(0);
         stringsToOutput.add(0, initialSpace + "   |" + String.valueOf(divisionResult));
 
-        String space = " ";
-        for (int i = 0; i < stringsToOutput.size(); i++) {
-            System.out.println(space + stringsToOutput.get(i));
-            if (i % 3 == 0) {
-                space += "   ";
-            }
-        }
-
+        return stringsToOutput;
     }
-
 }
