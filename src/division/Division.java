@@ -8,7 +8,7 @@ public class Division {
     static int rest = 0;
     static int currentDivision = 0;
 
-    ArrayList<String> divide(int[] division, int divider) {
+    List<String> divide(int[] division, int divider) {
 
         int multiply = 0;
         int[] divisionNumbers = division;
@@ -32,7 +32,7 @@ public class Division {
             }
         }
 
-        ArrayList<String> resultParameters = new ArrayList<String>();
+        List<String> resultParameters = new ArrayList<String>();
         resultParameters.add(String.valueOf(multiply));
         resultParameters.add((String.valueOf(rest)));
         resultParameters.add(String.valueOf(currentCalculationResult));
@@ -53,7 +53,7 @@ public class Division {
         }
 
         while (divisionFigureIndex < division.length()) {
-            ArrayList<String> res = divide(nums, divider);
+            List<String> res = divide(nums, divider);
             divisionResult += res.get(2);
             stringsToOutput.add("-" + res.get(0));
             stringsToOutput.add("--------");
