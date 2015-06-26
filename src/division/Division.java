@@ -9,7 +9,6 @@ public class Division {
     private int currentDivision;
     private String divisionResult = "";
 
-
     public List<String> divide(int[] division, int divider) {
 
         int multiply = 0;
