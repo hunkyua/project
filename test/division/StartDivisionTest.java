@@ -10,17 +10,12 @@ public class StartDivisionTest {
 
   @Test
   public void testResultOfDivision() {
-    int[] division = {8,4,6};
+    String division = "846";
     int divider = 4;
     Division div = new Division();
 
-    List<String> resultParameters = div.divide(division, divider);
-    int result;
-    String res = "";
-    for (String element : resultParameters) {
-       res += element;
-    }
-    result = Integer.parseInt(res);
+    List<String> listResult = div.printDivision(division, divider);
+    int result = Integer.parseInt(div.getDivisionResult());
 
     assertEquals(211, result);
   }

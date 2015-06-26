@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Division {
-    static int divisionFigureIndex = 0;
-    static int rest = 0;
-    static int currentDivision = 0;
+    private int divisionFigureIndex;
+    private int rest;
+    private int currentDivision;
+    private String divisionResult = "";
 
-    List<String> divide(int[] division, int divider) {
+
+    public List<String> divide(int[] division, int divider) {
 
         int multiply = 0;
         int[] divisionNumbers = division;
@@ -44,7 +46,6 @@ public class Division {
     }
 
     public List<String> printDivision(String division, int divider){
-        String divisionResult = "";
         List<String> stringsToOutput = new ArrayList<String>();
 
         int [] nums=new int[division.length()];
@@ -59,7 +60,7 @@ public class Division {
             stringsToOutput.add("--------");
 
             if (Integer.valueOf(res.get(1)) > 0 && divisionFigureIndex < division.length()) {
-                stringsToOutput.add(String.valueOf(res.get(1)) + String.valueOf(nums[divisionFigureIndex]));
+                stringsToOutput.add(res.get(1) + nums[divisionFigureIndex]);
 
             } else if (divisionFigureIndex < division.length()) {
                 stringsToOutput.add(String.valueOf(nums[divisionFigureIndex]));
@@ -71,8 +72,12 @@ public class Division {
         }
         String initialSpace = stringsToOutput.get(0);
         stringsToOutput.remove(0);
-        stringsToOutput.add(0, initialSpace + "   |" + String.valueOf(divisionResult));
+        stringsToOutput.add(0, initialSpace + "   |" + divisionResult);
 
         return stringsToOutput;
+    }
+
+    public String getDivisionResult() {
+        return divisionResult;
     }
 }

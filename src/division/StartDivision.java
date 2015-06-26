@@ -9,10 +9,10 @@ public class StartDivision {
     public static void main(String[] args) throws IOException {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Введите делимое: ");
-        String division=buffer.readLine();
+        String division = buffer.readLine();
         System.out.println("Введите делитель: ");
-        String secondParam=buffer.readLine();
-        int divider=Integer.valueOf(secondParam);
+        String secondParam = buffer.readLine();
+        int divider = Integer.valueOf(secondParam);
 
         String out = "  " + division + " |" + divider;
         System.out.println(out);
@@ -26,6 +26,13 @@ public class StartDivision {
             if (i % 3 == 0) {
                 space += "   ";
             }
+        }
+        int div = Integer.parseInt(division);
+        int result = Integer.parseInt(example.getDivisionResult());
+        if (div/divider == result) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
         }
     }
 }
