@@ -9,8 +9,6 @@ public class StartDivisionPlusPeriod
     public static String dividernum="";
     public static void main(String[] args) throws IOException {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-
-
         System.out.println("Введите делимое: ");
         division = buffer.readLine();
         System.out.println("Введите делитель: ");
@@ -20,7 +18,6 @@ public class StartDivisionPlusPeriod
         String out = " " + division + " |" + divider;
         System.out.println(out);
         System.out.println("-------------");
-
         
         Division example = new Division();
         List<String> stringsToOutput = example.printDivision(division, divider);
@@ -31,6 +28,7 @@ public class StartDivisionPlusPeriod
                 space += " ";
             }
         }
+        
         int div = Integer.parseInt(division);
         int result = Integer.parseInt(example.getDivisionResult());
         if (div/divider == result) {
