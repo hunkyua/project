@@ -16,8 +16,10 @@ public class StartDivisionPlusPeriod
         System.out.println("Введите делитель: ");
         divider= buffer.readLine();
 
-        String out = "  " + division + " |" + divider;
+        String out = " " + division + " |" + divider;
         System.out.println(out);
+        System.out.println("-------------");
+      
 
         Division instance = new Division();
         instance.printDivision(division, Integer.valueOf(divider));
