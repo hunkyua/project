@@ -2,7 +2,7 @@ package period3;
 
 public class StartDivisionPeriod {
     public static void main(String[] args) {
-        String division = "84686";
+        String division = "846";
         int divider = 24;
         String result = DivisionPeriod.doResultInString(division, divider);
         DivisionPeriod.drawSolution(Integer.parseInt(division), divider, result);
