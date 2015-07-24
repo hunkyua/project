@@ -23,7 +23,7 @@ public class DivisionPeriod {
         int tmp = separatedString.get(0);
         int iterForWhile = 1;
 
-        while (true) {
+        while (tmp != 0) {
             for (int i = 0; i < separatedString.size() - 1; i++) {
                 while (tmp < divider & iterForWhile < separatedString.size()) {
                     tmp = Integer.parseInt(tmp + separatedString.get(iterForWhile).toString());
@@ -47,10 +47,6 @@ public class DivisionPeriod {
                 }
                 tmp %= divider;
             } else {
-                //If no rest
-                if (tmp == 0) {
-                    return resultForPrint.toString();
-                }
                 //Add coma
                 if (resultForPrint.toString().equals("")) {
                     resultForPrint.append("0.");
@@ -61,28 +57,27 @@ public class DivisionPeriod {
                 }
 
                 //Divide after coma and find period
-                while (true) {
+                tmp *= 10;
+                temp.add(tmp);
+                resultForDivision.add(tmp / divider);
+                while (tmp < divider) {
+                    list.add(tmp);
                     tmp *= 10;
-                    temp.add(tmp);
-                    resultForDivision.add(tmp / divider);
-                    while (tmp < divider) {
-                        list.add(tmp);
-                        tmp *= 10;
-                        resultForPrint.append(0);
-                    }
-                    if (list.contains(tmp)) {
-                        int indexList = list.indexOf(tmp);
-                        int indexSb = resultForPrint.indexOf(".");
-                        resultForPrint.insert(indexList + indexSb + 1, "(");
-                        resultForPrint.append(")");
-                        return resultForPrint.toString();
-                    } else {
-                        list.add(tmp);
-                        break;
-                    }
+                    resultForPrint.append(0);
                 }
+                if (list.contains(tmp)) {
+                    int indexList = list.indexOf(tmp);
+                    int indexSb = resultForPrint.indexOf(".");
+                    resultForPrint.insert(indexList + indexSb + 1, "(");
+                    resultForPrint.append(")");
+                    return resultForPrint.toString();
+                } else {
+                    list.add(tmp);
+                }
+
             }
         }
+        return resultForPrint.toString();
     }
 
 
