@@ -1,8 +1,8 @@
-package periodPart2;
+package period3;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
+        import java.util.ArrayList;
+        import java.util.LinkedList;
+        import java.util.List;
 
 public class DivisionPeriod {
 
@@ -41,7 +41,7 @@ public class DivisionPeriod {
             //Divide more on less
             if (tmp >= divider) {
                 if (divider == 0) {
-                    throw new ArithmeticException("РќРµР»СЊР·СЏ РґРµР»РёС‚СЊ РЅР° 0");
+                    throw new ArithmeticException("Нельзя делить на 0");
                 } else {
                     resultForPrint.append(tmp / divider);
                 }
