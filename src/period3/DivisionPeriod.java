@@ -20,32 +20,32 @@ public class DivisionPeriod {
             separatedString.add(Integer.parseInt(String.valueOf(division.charAt(i))));
         }
 
-        int tmp = separatedString.get(0);
+        int smallestDivisible = separatedString.get(0);
         int iterForWhile = 1;
 
-        while (tmp != 0) {
+        while (smallestDivisible != 0) {
             for (int i = 0; i < separatedString.size() - 1; i++) {
-                while (tmp < divider & iterForWhile < separatedString.size()) {
-                    tmp = Integer.parseInt(tmp + separatedString.get(iterForWhile).toString());
-                    temp.add(tmp);
-                    resultForDivision.add(tmp / divider);
+                while (smallestDivisible < divider & iterForWhile < separatedString.size()) {
+                    smallestDivisible = Integer.parseInt(smallestDivisible + separatedString.get(iterForWhile).toString());
+                    temp.add(smallestDivisible);
+                    resultForDivision.add(smallestDivisible / divider);
                     resultForPrint.append(resultForDivision.get(i));
                     underNum.add(divider * resultForDivision.get(i));
-                    underLine.add(tmp % divider);
-                    tmp = underLine.get(i);
+                    underLine.add(smallestDivisible % divider);
+                    smallestDivisible = underLine.get(i);
                     iterForWhile++;
                     i++;
                 }
             }
 
             //Divide more on less
-            if (tmp >= divider) {
+            if (smallestDivisible >= divider) {
                 if (divider == 0) {
                     throw new ArithmeticException("Нельзя делить на 0");
                 } else {
-                    resultForPrint.append(tmp / divider);
+                    resultForPrint.append(smallestDivisible / divider);
                 }
-                tmp %= divider;
+                smallestDivisible %= divider;
             } else {
                 //Add coma
                 if (resultForPrint.toString().equals("")) {
@@ -57,22 +57,22 @@ public class DivisionPeriod {
                 }
 
                 //Divide after coma and find period
-                tmp *= 10;
-                temp.add(tmp);
-                resultForDivision.add(tmp / divider);
-                while (tmp < divider) {
-                    list.add(tmp);
-                    tmp *= 10;
+                smallestDivisible *= 10;
+                temp.add(smallestDivisible);
+                resultForDivision.add(smallestDivisible / divider);
+                while (smallestDivisible < divider) {
+                    list.add(smallestDivisible);
+                    smallestDivisible *= 10;
                     resultForPrint.append(0);
                 }
-                if (list.contains(tmp)) {
-                    int indexList = list.indexOf(tmp);
+                if (list.contains(smallestDivisible)) {
+                    int indexList = list.indexOf(smallestDivisible);
                     int indexSb = resultForPrint.indexOf(".");
                     resultForPrint.insert(indexList + indexSb + 1, "(");
                     resultForPrint.append(")");
                     return resultForPrint.toString();
                 } else {
-                    list.add(tmp);
+                    list.add(smallestDivisible);
                 }
 
             }
