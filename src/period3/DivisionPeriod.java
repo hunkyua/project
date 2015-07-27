@@ -80,7 +80,6 @@ public class DivisionPeriod {
         return resultForPrint.toString();
     }
 
-
     public static void drawSolution(int division, int divider, String result) {
 
         System.out.println(division + "  |" + divider);
