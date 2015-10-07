@@ -2,6 +2,7 @@ package JDBCConnector;
 
 import JDBCConnector.ActionWithRecordTable.DeleteInTable;
 import JDBCConnector.ActionWithRecordTable.InsertInTable;
+import JDBCConnector.ActionWithRecordTable.SelectInTable;
 import JDBCConnector.ActionWithRecordTable.UpdateInTable;
 import JDBCConnector.ActionWithTable.CreateTable;
 import JDBCConnector.ActionWithTable.DeleteTable;
@@ -19,6 +20,7 @@ public class Main {
         DeleteTable deleteTable = new DeleteTable();
         UpdateInTable updateInTable = new UpdateInTable();
         DeleteInTable deleteInTable = new DeleteInTable();
+        SelectInTable selectInTable = new SelectInTable();
 
 
 //        createTable.createDBUserTable();
@@ -26,6 +28,7 @@ public class Main {
 //        deleteTable.deleteTable();
 //        updateInTable.updateInTable();
 //        deleteInTable.deleteInTable();
+        selectInTable.selectInTable();
 
 
     }
