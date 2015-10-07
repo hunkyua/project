@@ -28,7 +28,7 @@ public class Main {
 //        deleteTable.deleteTable();
 //        updateInTable.updateInTable();
 //        deleteInTable.deleteInTable();
-        selectInTable.selectInTable();
+//        selectInTable.selectInTable();
 
 
     }
