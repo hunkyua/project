@@ -1,0 +1,41 @@
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.List;
+
+public class StartDivisionPlusPeriod
+{
+    public static String division="";
+    public static String dividernum="";
+    public static void main(String[] args) throws IOException {
+        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Введите делимое: ");
+        division = buffer.readLine();
+        System.out.println("Введите делитель: ");
+        dividernum = buffer.readLine();
+        int divider = Integer.valueOf(dividernum);
+
+        String out = " " + division + " |" + divider;
+        System.out.println(out);
+        System.out.println("-------------");
+        
+        Division example = new Division();
+        List<String> stringsToOutput = example.printDivision(division, divider);
+        String space = " ";
+        for (int i = 0; i < stringsToOutput.size(); i++) {
+            System.out.println(space + stringsToOutput.get(i));
+            if (i % 3 == 0) {
+                space += " ";
+            }
+        }
+        
+        int div = Integer.parseInt(division);
+        int result = Integer.parseInt(example.getDivisionResult());
+        if (div/divider == result) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+
+    }
+}
