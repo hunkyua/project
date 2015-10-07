@@ -13,7 +13,7 @@ public class Main {
         DeleteTable deleteTable = new DeleteTable();
 
 //        createTable.createDBUserTable();
-//        insert.insertRecordInTable();
+        insert.insertRecordInTable();
 //        deleteTable.deleteTable();
 
     }
