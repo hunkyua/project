@@ -1,5 +1,3 @@
-
-
 import java.sql.SQLException;
 
 /**
@@ -9,12 +7,15 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         CreateTable createTable = new CreateTable();
-        Insert insert = new Insert();
+        InsertInTable insertInTable = new InsertInTable();
         DeleteTable deleteTable = new DeleteTable();
+        UpdateInTable updateInTable = new UpdateInTable();
+
 
 //        createTable.createDBUserTable();
-        insert.insertRecordInTable();
+//        insertInTable.insertRecordInTable();
 //        deleteTable.deleteTable();
+          updateInTable.updateInTable();
 
     }
 }

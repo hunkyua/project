@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 /**
  * Created by oktopus on 07.10.15.
  */
-public class Insert {
+public class InsertInTable {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     JDBCConnector jdbc = new JDBCConnector();
@@ -16,7 +16,7 @@ public class Insert {
         Connection connection = null;
         Statement statement = null;
 
-        String insertTableSQL = "INSERT INTO TEST"
+        String insertInTable = "INSERT INTO TEST"
                 + "(USERNAME, SURNAME, CREATE_DATE) " + "VALUES"
                 + "('Valentin', 'Opanasyuk'," + "to_date('"
                 + getCurrentTimeStamp() + "', 'yyyy/mm/dd hh24:mi:ss'))";
@@ -24,9 +24,9 @@ public class Insert {
         try {
             connection = jdbc.getDBConnection();
             statement = connection.createStatement();
-            System.out.println(insertTableSQL);
-            statement.execute(insertTableSQL);
-            System.out.println("Insert in table \"test\" complete!");
+            System.out.println(insertInTable);
+            statement.execute(insertInTable);
+            System.out.println("InsertInTable in table \"test\" complete!");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
