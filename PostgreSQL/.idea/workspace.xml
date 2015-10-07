@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff7f62e4-a4ea-4250-bd33-10d8d7acf0e6" name="Default" comment="Good">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/UpdateInTable.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Insert.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/Insert.java" afterPath="$PROJECT_DIR$/src/main/java/InsertInTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+    <list default="true" id="ff7f62e4-a4ea-4250-bd33-10d8d7acf0e6" name="Default" comment="">
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/CreateTable.java" afterPath="$PROJECT_DIR$/src/main/java/ActionWithTable/CreateTable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/DeleteTable.java" afterPath="$PROJECT_DIR$/src/main/java/ActionWithTable/DeleteTable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/InsertInTable.java" afterPath="$PROJECT_DIR$/src/main/java/ActionWithRecordTable/InsertInTable.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/UpdateInTable.java" afterPath="$PROJECT_DIR$/src/main/java/ActionWithRecordTable/UpdateInTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,35 +33,35 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9777778">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="UpdateInTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/UpdateInTable.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ActionWithRecordTable/UpdateInTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1444217340776" expanded="true" signature="368:425" placeholder="UPDATE TEST ..." />
-                <marker date="1444217340776" expanded="true" signature="368:448" placeholder="UPDATE TEST ..." />
-                <marker date="1444217340776" expanded="true" signature="368:480" placeholder="UPDATE TEST ..." />
+                <marker date="1444217637364" expanded="true" signature="400:457" placeholder="UPDATE TEST ..." />
+                <marker date="1444217637364" expanded="true" signature="400:480" placeholder="UPDATE TEST ..." />
+                <marker date="1444217637364" expanded="true" signature="400:512" placeholder="UPDATE TEST ..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CreateTable.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CreateTable.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ActionWithTable/CreateTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
               <folding>
-                <marker date="1444212012224" expanded="true" signature="372:605" placeholder="CREATE TABLE..TEST..." />
+                <marker date="1444217601796" expanded="true" signature="397:630" placeholder="CREATE TABLE..TEST..." />
               </folding>
             </state>
           </provider>
@@ -90,8 +90,8 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/InsertInTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/UpdateInTable/UpdateInTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/UpdateInTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -490,7 +490,7 @@
       <updated>1444216345107</updated>
       <workItem from="1444216348413" duration="102000" />
       <workItem from="1444216456014" duration="20000" />
-      <workItem from="1444216492851" duration="979000" />
+      <workItem from="1444216492851" duration="1140000" />
     </task>
     <task id="LOCAL-00001" summary="Good">
       <created>1444216787903</created>
@@ -498,11 +498,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444216787903</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Good">
+      <created>1444217488659</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1444217488659</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1101000" />
+    <option name="totallyTimeSpent" value="1262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="24" width="1323" height="744" extended-state="6" />
@@ -584,32 +590,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/InsertInTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ActionWithRecordTable/InsertInTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2038835">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <marker date="1444216929752" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1444217637368" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DeleteTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ActionWithTable/DeleteTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14563107">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding>
-            <marker date="1444210679292" expanded="true" signature="-1:-1" placeholder="DROP TABLE t..." />
+            <marker date="1444217601764" expanded="true" signature="-1:-1" placeholder="DROP TABLE t..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CreateTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ActionWithTable/CreateTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="34" selection-end-column="5" />
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="35" selection-end-column="5" />
           <folding>
-            <marker date="1444212012224" expanded="true" signature="372:605" placeholder="CREATE TABLE..TEST..." />
+            <marker date="1444217601796" expanded="true" signature="397:630" placeholder="CREATE TABLE..TEST..." />
           </folding>
         </state>
       </provider>
@@ -624,23 +630,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/UpdateInTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ActionWithRecordTable/UpdateInTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="48" selection-start-line="18" selection-start-column="48" selection-end-line="18" selection-end-column="48" />
+          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444217340776" expanded="true" signature="368:425" placeholder="UPDATE TEST ..." />
-            <marker date="1444217340776" expanded="true" signature="368:448" placeholder="UPDATE TEST ..." />
-            <marker date="1444217340776" expanded="true" signature="368:480" placeholder="UPDATE TEST ..." />
+            <marker date="1444217637364" expanded="true" signature="400:457" placeholder="UPDATE TEST ..." />
+            <marker date="1444217637364" expanded="true" signature="400:480" placeholder="UPDATE TEST ..." />
+            <marker date="1444217637364" expanded="true" signature="400:512" placeholder="UPDATE TEST ..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.9777778">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
           <folding />
         </state>
       </provider>

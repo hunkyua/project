@@ -1,3 +1,8 @@
+import ActionWithRecordTable.InsertInTable;
+import ActionWithRecordTable.UpdateInTable;
+import ActionWithTable.CreateTable;
+import ActionWithTable.DeleteTable;
+
 import java.sql.SQLException;
 
 /**
@@ -15,7 +20,7 @@ public class Main {
 //        createTable.createDBUserTable();
 //        insertInTable.insertRecordInTable();
 //        deleteTable.deleteTable();
-          updateInTable.updateInTable();
+//        updateInTable.updateInTable();
 
     }
 }

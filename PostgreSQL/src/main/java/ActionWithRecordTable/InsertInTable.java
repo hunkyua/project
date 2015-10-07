@@ -1,3 +1,5 @@
+package ActionWithRecordTable;
+
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.SQLException;
@@ -26,7 +28,7 @@ public class InsertInTable {
             statement = connection.createStatement();
             System.out.println(insertInTable);
             statement.execute(insertInTable);
-            System.out.println("InsertInTable in table \"test\" complete!");
+            System.out.println("ActionWithRecordTable.InsertInTable in table \"test\" complete!");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

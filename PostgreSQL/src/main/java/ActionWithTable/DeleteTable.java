@@ -1,3 +1,5 @@
+package ActionWithTable;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,7 +20,7 @@ public class DeleteTable {
             statement = connection.createStatement();
             System.out.println(deleteTableSQL);
             statement.execute(deleteTableSQL);
-            System.out.println("DeleteTable \"test\" is complete!");
+            System.out.println("ActionWithTable.DeleteTable \"test\" is complete!");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
