@@ -1,3 +1,4 @@
+package JDBCConnector;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -14,7 +15,7 @@ public class JDBCConnector {
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "root";
 
-    public static Connection getDBConnection() {
+    public Connection getDBConnection() {
         Connection connection = null;
         try {
             Class.forName(DB_DRIVER);

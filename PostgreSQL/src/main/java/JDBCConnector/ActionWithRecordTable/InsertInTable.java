@@ -1,5 +1,6 @@
-package ActionWithRecordTable;
+package JDBCConnector.ActionWithRecordTable;
 
+import JDBCConnector.JDBCConnector;
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.SQLException;
@@ -14,7 +15,7 @@ public class InsertInTable {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     JDBCConnector jdbc = new JDBCConnector();
-    protected void insertRecordInTable() throws SQLException {
+    public void insertRecordInTable() throws SQLException {
         Connection connection = null;
         Statement statement = null;
 
@@ -28,12 +29,15 @@ public class InsertInTable {
             statement = connection.createStatement();
             System.out.println(insertInTable);
             statement.execute(insertInTable);
-            System.out.println("ActionWithRecordTable.InsertInTable in table \"test\" complete!");
+            System.out.println("Insert in table \"test\" complete!");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             if (statement != null) {
                 statement.close();
+            }
+            if (connection != null) {
+                connection.close();
             }
         }
     }

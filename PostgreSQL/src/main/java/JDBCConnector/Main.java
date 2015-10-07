@@ -1,7 +1,10 @@
-import ActionWithRecordTable.InsertInTable;
-import ActionWithRecordTable.UpdateInTable;
-import ActionWithTable.CreateTable;
-import ActionWithTable.DeleteTable;
+package JDBCConnector;
+
+import JDBCConnector.ActionWithRecordTable.DeleteInTable;
+import JDBCConnector.ActionWithRecordTable.InsertInTable;
+import JDBCConnector.ActionWithRecordTable.UpdateInTable;
+import JDBCConnector.ActionWithTable.CreateTable;
+import JDBCConnector.ActionWithTable.DeleteTable;
 
 import java.sql.SQLException;
 
@@ -15,12 +18,15 @@ public class Main {
         InsertInTable insertInTable = new InsertInTable();
         DeleteTable deleteTable = new DeleteTable();
         UpdateInTable updateInTable = new UpdateInTable();
+        DeleteInTable deleteInTable = new DeleteInTable();
 
 
 //        createTable.createDBUserTable();
 //        insertInTable.insertRecordInTable();
 //        deleteTable.deleteTable();
 //        updateInTable.updateInTable();
+//        deleteInTable.deleteInTable();
+
 
     }
 }

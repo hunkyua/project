@@ -1,5 +1,6 @@
-package ActionWithRecordTable;
+package JDBCConnector.ActionWithRecordTable;
 
+import JDBCConnector.JDBCConnector;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -9,7 +10,7 @@ import java.sql.Statement;
  */
 public class UpdateInTable {
     JDBCConnector jdbc = new JDBCConnector();
-    protected void updateInTable() throws SQLException {
+    public void updateInTable() throws SQLException {
         Connection connection = null;
         Statement statement = null;
 
@@ -22,12 +23,16 @@ public class UpdateInTable {
             statement = connection.createStatement();
             System.out.println(updateInTable);
             statement.execute(updateInTable);
-            System.out.println("ActionWithRecordTable.UpdateInTable \"test\" is complete!");
+            System.out.println("Update in table \"test\" is complete!");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
             if (statement != null) {
                 statement.close();
+            }
+
+            if (connection != null) {
+                connection.close();
             }
         }
     }
