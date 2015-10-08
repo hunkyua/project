@@ -4,7 +4,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-
 /**
  * Created by oktopus on 07.10.15.
  */
@@ -32,7 +31,9 @@ public class JDBCConnector {
             System.out.println("Connection failed");
             e.printStackTrace();
         }
+
         System.out.println("Failed to make connection");
+
         return connection;
     }
 }
