@@ -9,9 +9,10 @@ import java.sql.Statement;
 /**
  * Created by oktopus on 07.10.15.
  */
-public class DeleteInTable {
+public class DeleteRecordInTable {
     JDBCConnector jdbc = new JDBCConnector();
     Connection connection;
+
     public void deleteInTable() throws SQLException {
         Statement statement = null;
 

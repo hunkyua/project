@@ -11,10 +11,11 @@ import java.util.Scanner;
 public class JDBCConnector {
     private final String DB_DRIVER = "org.postgresql.Driver";
     private final String DB_URL = "jdbc:postgresql://localhost:5432/";
-//    private final String DB_NAME = "sqlbd";
+    //    private final String DB_NAME = "sqlbd";
 //    private final String DB_USER = "postgres";
 //    private final String DB_PASSWORD = "root";
     public static Connection connection;
+
     public Connection isConnected() {
         return connection;
     }
@@ -36,12 +37,14 @@ public class JDBCConnector {
         try {
             connection = DriverManager.getConnection(
                     DB_URL + db_name, db_user, db_password);
+            System.out.println("Connection complete!");
         } catch (SQLException e) {
             System.out.println("Connection failed");
+            System.exit(0);
             e.printStackTrace();
         }
 
-        System.out.println("Connection complete!");
+
     }
 }
 

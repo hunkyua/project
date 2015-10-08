@@ -1,6 +1,7 @@
 package JDBCConnector.ActionWithRecordTable;
 
 import JDBCConnector.JDBCConnector;
+
 import java.sql.Connection;
 import java.util.Date;
 import java.sql.SQLException;
@@ -11,11 +12,12 @@ import java.text.SimpleDateFormat;
 /**
  * Created by oktopus on 07.10.15.
  */
-public class InsertInTable {
+public class InsertRecordInTable {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     JDBCConnector jdbc = new JDBCConnector();
     Connection connection;
+
     public void insertRecordInTable() throws SQLException {
 
         Statement statement = null;

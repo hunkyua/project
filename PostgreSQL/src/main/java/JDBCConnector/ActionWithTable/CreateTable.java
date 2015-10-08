@@ -1,6 +1,7 @@
 package JDBCConnector.ActionWithTable;
 
 import JDBCConnector.JDBCConnector;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -11,6 +12,7 @@ import java.sql.Statement;
 public class CreateTable {
     JDBCConnector jdbc = new JDBCConnector();
     Connection connection;
+
     public void createDBUserTable() throws SQLException {
         Statement statement = null;
 

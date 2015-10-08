@@ -1,6 +1,7 @@
 package JDBCConnector.ActionWithRecordTable;
 
 import JDBCConnector.JDBCConnector;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -8,9 +9,10 @@ import java.sql.Statement;
 /**
  * Created by oktopus on 07.10.15.
  */
-public class UpdateInTable {
+public class UpdateRecordInTable {
     JDBCConnector jdbc = new JDBCConnector();
     Connection connection;
+
     public void updateInTable() throws SQLException {
         Statement statement = null;
 

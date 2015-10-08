@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by oktopus on 07.10.15.
  */
-public class SelectInTable {
+public class SelectRecordInTable {
     JDBCConnector jdbc = new JDBCConnector();
     Connection connection;
     public void selectInTable() throws SQLException {
