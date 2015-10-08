@@ -41,7 +41,7 @@ public class JDBCConnector {
             e.printStackTrace();
         }
 
-        System.out.println("Failed to make connection");
+        System.out.println("Connection complete!");
     }
 }
 

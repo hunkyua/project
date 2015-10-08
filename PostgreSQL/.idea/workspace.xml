@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff7f62e4-a4ea-4250-bd33-10d8d7acf0e6" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/Help.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asdasd.iws" />
@@ -36,11 +31,21 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34729064">
-              <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.41379312">
+              <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Help.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Help.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -49,7 +54,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
+              <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#566#567#0" expanded="true" />
@@ -177,13 +182,14 @@
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Reader.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Connect.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/DatabaseManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Help.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java" />
       </list>
     </option>
@@ -361,6 +367,7 @@
     <property name="FullScreen" value="false" />
     <property name="OverrideImplement.combined" value="true" />
     <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -659,7 +666,7 @@
       <workItem from="1444298734969" duration="2331000" />
       <workItem from="1444307239023" duration="871000" />
       <workItem from="1444309697164" duration="247000" />
-      <workItem from="1444336543367" duration="5897000" />
+      <workItem from="1444336543367" duration="7249000" />
     </task>
     <task id="LOCAL-00001" summary="Good">
       <created>1444216787903</created>
@@ -703,11 +710,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444301036869</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add new function. Always connect but when close, connect close.">
+      <created>1444342721882</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1444342721882</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31432000" />
+    <option name="totallyTimeSpent" value="32784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -739,7 +752,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38734567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.43055555" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -767,7 +780,8 @@
     <MESSAGE value="Add method DeleteInTable" />
     <MESSAGE value="Add method SelectInTable" />
     <MESSAGE value="Add switch command" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add switch command" />
+    <MESSAGE value="Add new function. Always connect but when close, connect close." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add new function. Always connect but when close, connect close." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1212,18 +1226,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1235,10 +1237,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="43" column="48" selection-start-line="43" selection-start-column="48" selection-end-line="43" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34729064">
-          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.41379312">
+          <caret line="40" column="22" selection-start-line="40" selection-start-column="22" selection-end-line="40" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

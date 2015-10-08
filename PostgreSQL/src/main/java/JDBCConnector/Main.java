@@ -20,6 +20,7 @@ public class Main {
     static JDBCConnector jdbc = new JDBCConnector();
     static Connection connection;
     public static void main(String[] args) throws SQLException, IOException {
+        Help help = new Help();
         CreateTable createTable = new CreateTable();
         InsertInTable insertInTable = new InsertInTable();
         DeleteTable deleteTable = new DeleteTable();
@@ -38,19 +39,12 @@ public class Main {
         jdbc.getDBConnection();
 
         while (true) {
-            System.out.println("You can choose next command:");
-            System.out.println("****************************        ");
-            System.out.println("1: Create table");
-            System.out.println("2: Delete table");
-            System.out.println("3: Insert record in table");
-            System.out.println("4: Update record in table");
-            System.out.println("5: Delete record in table");
-            System.out.println("6: Select record in table");
-            System.out.println("7: Exit");
-            System.out.println("Please choose command:");
-
+            System.out.println("Введи команду 1...7 (или 0 для помощи) :");
             int choose = Integer.parseInt(reader.readLine());
             switch (choose) {
+                case 0:
+                    help.help();
+                    break;
                 case 1:
                     createTable.createDBUserTable();
                     break;
@@ -70,15 +64,18 @@ public class Main {
                     selectInTable.selectInTable();
                     break;
                 case 7:
-                    System.exit(0);
                     if (connection != null) {
                         connection.close();
                     }
+                    System.out.println("*****************************");
+                    System.out.println("*********  Goodbye  *********");
+                    System.out.println("*****************************");
+                    System.exit(0);
                     break;
                 default:
-                    System.out.println("************************");
-                    System.out.println("**  Неверная команда  **");
-                    System.out.println("************************\n");
+                    System.out.println("******************************");
+                    System.out.println("*****  Неверная команда  *****");
+                    System.out.println("******************************\n");
             }
         }
     }
