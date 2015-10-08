@@ -10,8 +10,8 @@ import java.sql.Statement;
  */
 public class CreateTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Connection connection;
     public void createDBUserTable() throws SQLException {
-        Connection connection = null;
         Statement statement = null;
 
         String createTableSQL = "CREATE TABLE TEST("
@@ -22,7 +22,7 @@ public class CreateTable {
                 + ")";
 
         try {
-            connection = jdbc.getDBConnection();
+            connection = jdbc.isConnected();
             statement = connection.createStatement();
             System.out.println(createTableSQL);
             statement.execute(createTableSQL);
@@ -32,9 +32,6 @@ public class CreateTable {
         } finally {
             if (statement != null) {
                 statement.close();
-            }
-            if (connection != null) {
-                connection.close();
             }
         }
     }

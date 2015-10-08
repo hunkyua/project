@@ -14,14 +14,15 @@ import java.util.List;
  */
 public class SelectInTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Connection connection;
     public void selectInTable() throws SQLException {
-        Connection connection = null;
+
         Statement statement = null;
 
         String selectInTable = "SELECT * FROM TEST";
 
         try {
-            connection = jdbc.getDBConnection();
+            connection = jdbc.isConnected();
             statement = connection.createStatement();
             System.out.println(selectInTable);
             statement.execute(selectInTable);
@@ -51,10 +52,6 @@ public class SelectInTable {
         } finally {
             if (statement != null) {
                 statement.close();
-            }
-
-            if (connection != null) {
-                connection.close();
             }
         }
     }

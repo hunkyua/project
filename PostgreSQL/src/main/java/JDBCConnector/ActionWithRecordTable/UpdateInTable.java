@@ -10,8 +10,8 @@ import java.sql.Statement;
  */
 public class UpdateInTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Connection connection;
     public void updateInTable() throws SQLException {
-        Connection connection = null;
         Statement statement = null;
 
         String updateInTable = "UPDATE TEST"
@@ -19,7 +19,7 @@ public class UpdateInTable {
                 + "WHERE ID = 1";
 
         try {
-            connection = jdbc.getDBConnection();
+            connection = jdbc.isConnected();
             statement = connection.createStatement();
             System.out.println(updateInTable);
             statement.execute(updateInTable);
@@ -29,10 +29,6 @@ public class UpdateInTable {
         } finally {
             if (statement != null) {
                 statement.close();
-            }
-
-            if (connection != null) {
-                connection.close();
             }
         }
     }

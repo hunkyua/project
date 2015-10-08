@@ -11,14 +11,14 @@ import java.sql.Statement;
  */
 public class DeleteInTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Connection connection;
     public void deleteInTable() throws SQLException {
-        Connection connection = null;
         Statement statement = null;
 
         String deleteInTable = "DELETE FROM TEST WHERE ID = 4";
 
         try {
-            connection = jdbc.getDBConnection();
+            connection = jdbc.isConnected();
             statement = connection.createStatement();
             System.out.println(deleteInTable);
             statement.execute(deleteInTable);
@@ -28,10 +28,6 @@ public class DeleteInTable {
         } finally {
             if (statement != null) {
                 statement.close();
-            }
-
-            if (connection != null) {
-                connection.close();
             }
         }
     }

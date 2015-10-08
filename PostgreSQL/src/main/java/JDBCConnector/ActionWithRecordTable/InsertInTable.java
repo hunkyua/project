@@ -15,8 +15,9 @@ public class InsertInTable {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     JDBCConnector jdbc = new JDBCConnector();
+    Connection connection;
     public void insertRecordInTable() throws SQLException {
-        Connection connection = null;
+
         Statement statement = null;
 
         String insertInTable = "INSERT INTO TEST"
@@ -25,7 +26,7 @@ public class InsertInTable {
                 + getCurrentTimeStamp() + "', 'yyyy/mm/dd hh24:mi:ss'))";
 
         try {
-            connection = jdbc.getDBConnection();
+            connection = jdbc.isConnected();
             statement = connection.createStatement();
             System.out.println(insertInTable);
             statement.execute(insertInTable);
@@ -35,9 +36,6 @@ public class InsertInTable {
         } finally {
             if (statement != null) {
                 statement.close();
-            }
-            if (connection != null) {
-                connection.close();
             }
         }
     }

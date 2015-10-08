@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff7f62e4-a4ea-4250-bd33-10d8d7acf0e6" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" afterPath="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="asdasd.iws" />
@@ -31,8 +36,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6545454">
-              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.34729064">
+              <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,9 +49,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#566#567#0" expanded="true" />
+                <element signature="e#599#600#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,10 +63,47 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="16" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1444300608626" expanded="true" signature="526:544" placeholder="SELECT * FRO..TEST..." />
+                <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateInTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CreateTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+              <folding>
+                <marker date="1444342240283" expanded="true" signature="433:666" placeholder="CREATE TABLE..TEST..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DeleteTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1444342240287" expanded="true" signature="427:442" placeholder="DROP TABLE t..." />
               </folding>
             </state>
           </provider>
@@ -69,10 +113,22 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+              <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1444219631592" expanded="true" signature="448:477" placeholder="DELETE FROM ..." />
+                <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InsertInTable.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+              <folding>
+                <marker date="1444342240275" expanded="true" signature="625:839" placeholder="INSERT INTO ..." />
               </folding>
             </state>
           </provider>
@@ -119,15 +175,15 @@
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/view/View.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Reader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Connect.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/DatabaseManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java" />
         <option value="$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java" />
       </list>
     </option>
@@ -153,9 +209,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="43" />
-    <option name="y" value="24" />
-    <option name="width" value="1313" />
-    <option name="height" value="742" />
+    <option name="y" value="-4" />
+    <option name="width" value="1323" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -180,6 +236,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -286,8 +344,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -600,7 +656,10 @@
       <workItem from="1444216492851" duration="7715000" />
       <workItem from="1444234799297" duration="4966000" />
       <workItem from="1444284412909" duration="9283000" />
-      <workItem from="1444298734969" duration="2308000" />
+      <workItem from="1444298734969" duration="2331000" />
+      <workItem from="1444307239023" duration="871000" />
+      <workItem from="1444309697164" duration="247000" />
+      <workItem from="1444336543367" duration="5897000" />
     </task>
     <task id="LOCAL-00001" summary="Good">
       <created>1444216787903</created>
@@ -638,11 +697,17 @@
       <option name="project" value="LOCAL" />
       <updated>1444224241082</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Add switch command">
+      <created>1444301036869</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1444301036869</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24394000" />
+    <option name="totallyTimeSpent" value="31432000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -654,7 +719,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="43" y="24" width="1313" height="742" extended-state="0" />
+    <frame x="43" y="-4" width="1323" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -667,14 +732,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32847896" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3271605" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25177586" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40453073" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24980423" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38734567" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -701,11 +766,12 @@
     <MESSAGE value="Add packages" />
     <MESSAGE value="Add method DeleteInTable" />
     <MESSAGE value="Add method SelectInTable" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add method SelectInTable" />
+    <MESSAGE value="Add switch command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add switch command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -714,6 +780,138 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="26" selection-start-line="48" selection-start-column="12" selection-end-line="61" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -730,6 +928,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -740,7 +940,7 @@
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444300608626" expanded="true" signature="526:544" placeholder="SELECT * FRO..TEST..." />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
           </folding>
         </state>
       </provider>
@@ -749,10 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444293917489" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -762,7 +958,7 @@
           <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444219631592" expanded="true" signature="448:477" placeholder="DELETE FROM ..." />
+            <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -773,7 +969,6 @@
           <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444293927049" expanded="true" signature="-1:-1" placeholder="UPDATE TEST ..." />
           </folding>
         </state>
       </provider>
@@ -782,10 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444293942725" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..TEST..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -793,10 +984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444219297884" expanded="true" signature="-1:-1" placeholder="DROP TABLE t..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -823,7 +1010,7 @@
           <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444300608626" expanded="true" signature="526:544" placeholder="SELECT * FRO..TEST..." />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
           </folding>
         </state>
       </provider>
@@ -834,6 +1021,8 @@
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -854,7 +1043,7 @@
           <caret line="21" column="40" selection-start-line="21" selection-start-column="40" selection-end-line="21" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444300608626" expanded="true" signature="526:544" placeholder="SELECT * FRO..TEST..." />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
           </folding>
         </state>
       </provider>
@@ -865,6 +1054,8 @@
           <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -873,10 +1064,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444219297884" expanded="true" signature="-1:-1" placeholder="DROP TABLE t..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -886,7 +1073,6 @@
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444293927049" expanded="true" signature="-1:-1" placeholder="UPDATE TEST ..." />
           </folding>
         </state>
       </provider>
@@ -897,7 +1083,7 @@
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444219631592" expanded="true" signature="448:477" placeholder="DELETE FROM ..." />
+            <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -906,10 +1092,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444293917489" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,10 +1099,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444293942725" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..TEST..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,47 +1143,30 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901-1.jdbc4/postgresql-9.1-901-1.jdbc4.jar!/org/postgresql/core/Logger.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9666667">
+        <state vertical-scroll-proportion="0.3617021">
           <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
+          <folding>
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/postgresql/postgresql/9.1-901-1.jdbc4/postgresql-9.1-901-1.jdbc4.jar!/org/postgresql/Driver.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.331307">
-          <caret line="113" column="22" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="22" />
+          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="47" selection-start-line="24" selection-start-column="47" selection-end-line="24" selection-end-column="47" />
+          <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444293942725" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..TEST..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.007518797">
-          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444219297884" expanded="true" signature="-1:-1" placeholder="DROP TABLE t..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444293927049" expanded="true" signature="-1:-1" placeholder="UPDATE TEST ..." />
+            <marker date="1444342240259" expanded="true" signature="437:466" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
@@ -1013,10 +1174,40 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/InsertInTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+          <caret line="38" column="13" selection-start-line="38" selection-start-column="13" selection-end-line="38" selection-end-column="13" />
+          <folding>
+            <marker date="1444342240275" expanded="true" signature="625:839" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/UpdateInTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="13" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444293917489" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/CreateTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+          <folding>
+            <marker date="1444342240283" expanded="true" signature="433:666" placeholder="CREATE TABLE..TEST..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithTable/DeleteTable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1444342240287" expanded="true" signature="427:442" placeholder="DROP TABLE t..." />
           </folding>
         </state>
       </provider>
@@ -1024,20 +1215,11 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/JDBCConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/DeleteInTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="46" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1444219631592" expanded="true" signature="448:477" placeholder="DELETE FROM ..." />
+            <element signature="e#566#567#0" expanded="true" />
+            <element signature="e#599#600#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1045,18 +1227,18 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/ActionWithRecordTable/SelectInTable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1444300608626" expanded="true" signature="526:544" placeholder="SELECT * FRO..TEST..." />
+            <marker date="1444342240303" expanded="true" signature="516:534" placeholder="SELECT * FRO..TEST..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/JDBCConnector/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6545454">
-          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.34729064">
+          <caret line="36" column="65" selection-start-line="36" selection-start-column="65" selection-end-line="36" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

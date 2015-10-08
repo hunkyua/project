@@ -9,15 +9,16 @@ import JDBCConnector.ActionWithTable.DeleteTable;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.sql.Connection;
 import java.sql.SQLException;
 
 /**
  * Created by oktopus on 06.10.15.
  */
 public class Main {
-
+    static JDBCConnector jdbc = new JDBCConnector();
+    static Connection connection;
     public static void main(String[] args) throws SQLException, IOException {
         CreateTable createTable = new CreateTable();
         InsertInTable insertInTable = new InsertInTable();
@@ -34,6 +35,8 @@ public class Main {
         System.out.println(" /    ss  qq  qq     ll    /       ");
         System.out.println("/  ssss   qqqq qqq  lllll /        ");
         System.out.println("--------------------------        ");
+        jdbc.getDBConnection();
+
         while (true) {
             System.out.println("You can choose next command:");
             System.out.println("****************************        ");
@@ -68,9 +71,14 @@ public class Main {
                     break;
                 case 7:
                     System.exit(0);
+                    if (connection != null) {
+                        connection.close();
+                    }
                     break;
                 default:
-                    System.out.println("Неверная команда");
+                    System.out.println("************************");
+                    System.out.println("**  Неверная команда  **");
+                    System.out.println("************************\n");
             }
         }
     }
