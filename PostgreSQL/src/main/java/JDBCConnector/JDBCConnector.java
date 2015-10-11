@@ -11,9 +11,9 @@ import java.util.Scanner;
 public class JDBCConnector {
     private final String DB_DRIVER = "org.postgresql.Driver";
     private final String DB_URL = "jdbc:postgresql://localhost:5432/";
-    //    private final String DB_NAME = "sqlbd";
-//    private final String DB_USER = "postgres";
-//    private final String DB_PASSWORD = "root";
+    public static String db_name;
+    public static String db_user;
+    public static String db_password;
     public static Connection connection;
 
     public Connection isConnected() {
@@ -29,11 +29,11 @@ public class JDBCConnector {
         }
         Scanner sc = new Scanner(System.in);
         System.out.println("Please enter db_name: ");
-        String db_name = sc.nextLine();
+        db_name = sc.nextLine();
         System.out.println("Please enter db_user");
-        String db_user = sc.nextLine();
+        db_user = sc.nextLine();
         System.out.println("Please enter db_password: ");
-        String db_password = sc.nextLine();
+        db_password = sc.nextLine();
         try {
             connection = DriverManager.getConnection(
                     DB_URL + db_name, db_user, db_password);

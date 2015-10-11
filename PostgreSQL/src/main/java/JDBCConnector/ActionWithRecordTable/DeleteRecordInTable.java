@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithRecordTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,12 +11,14 @@ import java.sql.Statement;
  */
 public class DeleteRecordInTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Reader reader = new Reader();
     Connection connection;
 
     public void deleteInTable() throws SQLException {
         Statement statement = null;
-
-        String deleteInTable = "DELETE FROM TEST WHERE ID = 4";
+        System.out.println("Enter tableName where do you want DeleteRecordInTable:");
+        String tableName = reader.Reader();
+        String deleteInTable = "DELETE FROM " + tableName + " WHERE ID = 4";
 
         try {
             connection = jdbc.isConnected();

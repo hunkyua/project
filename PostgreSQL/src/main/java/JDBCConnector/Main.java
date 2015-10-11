@@ -6,7 +6,7 @@ import JDBCConnector.ActionWithRecordTable.SelectRecordInTable;
 import JDBCConnector.ActionWithRecordTable.UpdateRecordInTable;
 import JDBCConnector.ActionWithTable.CreateTable;
 import JDBCConnector.ActionWithTable.DeleteTable;
-import JDBCConnector.ActionWithTable.GetTableNames;
+import JDBCConnector.ActionWithTable.GetAllTableNames;
 import JDBCConnector.ActionWithTable.GetTableSize;
 
 import java.io.BufferedReader;
@@ -30,7 +30,7 @@ public class Main {
         UpdateRecordInTable updateRecordInTable = new UpdateRecordInTable();
         DeleteRecordInTable deleteRecordInTable = new DeleteRecordInTable();
         SelectRecordInTable selectRecordInTable = new SelectRecordInTable();
-        GetTableNames getTableNames = new GetTableNames();
+        GetAllTableNames getAllTableNames = new GetAllTableNames();
         GetTableSize getTableSize = new GetTableSize();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -70,7 +70,7 @@ public class Main {
                     selectRecordInTable.selectInTable();
                     break;
                 case 7:
-                    getTableNames.getTableNames();
+                    getAllTableNames.getTableNames();
                     break;
                 case 8:
                     getTableSize.getTableSize();

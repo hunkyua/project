@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithRecordTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.util.Date;
@@ -16,14 +16,16 @@ public class InsertRecordInTable {
     private static final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
     JDBCConnector jdbc = new JDBCConnector();
+    Reader reader = new Reader();
     Connection connection;
 
     public void insertRecordInTable() throws SQLException {
 
         Statement statement = null;
-
-        String insertInTable = "INSERT INTO TEST"
-                + "(USERNAME, SURNAME, CREATE_DATE) " + "VALUES"
+        System.out.println("Enter tableName where do you want InsertRecordInTable:");
+        String tableName = reader.Reader();
+        String insertInTable = "INSERT INTO " + tableName
+                + " (USERNAME, SURNAME, CREATE_DATE) " + "VALUES"
                 + "('Valentin', 'Opanasyuk'," + "to_date('"
                 + getCurrentTimeStamp() + "', 'yyyy/mm/dd hh24:mi:ss'))";
 

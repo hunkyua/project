@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithRecordTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,12 +11,14 @@ import java.sql.Statement;
  */
 public class UpdateRecordInTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Reader reader = new Reader();
     Connection connection;
 
     public void updateInTable() throws SQLException {
         Statement statement = null;
-
-        String updateInTable = "UPDATE TEST"
+        System.out.println("Enter tableName where do you want UpdateRecordInTable:");
+        String tableName = reader.Reader();
+        String updateInTable = "UPDATE " + tableName
                 + " SET USERNAME = '}|{oI7a', SURNAME = 'Pupkina' "
                 + "WHERE ID = 1";
 

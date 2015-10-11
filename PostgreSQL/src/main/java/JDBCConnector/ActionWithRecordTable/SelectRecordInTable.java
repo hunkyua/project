@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithRecordTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -14,12 +14,15 @@ import java.util.List;
  */
 public class SelectRecordInTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Reader reader = new Reader();
     Connection connection;
+
     public void selectInTable() throws SQLException {
 
         Statement statement = null;
-
-        String selectInTable = "SELECT * FROM TEST";
+        System.out.println("Enter tableName where do you want SelectRecordInTable:");
+        String tableName = reader.Reader();
+        String selectInTable = "SELECT * FROM " + tableName;
 
         try {
             connection = jdbc.isConnected();

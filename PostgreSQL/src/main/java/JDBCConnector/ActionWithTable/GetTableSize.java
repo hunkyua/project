@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -12,13 +12,16 @@ import java.sql.Statement;
  */
 public class GetTableSize {
     JDBCConnector jdbc = new JDBCConnector();
+    Reader reader = new Reader();
     Connection connection;
 
     public void getTableSize() {
         try {
             connection = jdbc.isConnected();
+            System.out.println("Enter tableName what do you want getTableSize:");
+            String tableName = reader.Reader();
             Statement stmt = connection.createStatement();
-            ResultSet rsCount = stmt.executeQuery("SELECT COUNT (*) FROM test");
+            ResultSet rsCount = stmt.executeQuery("SELECT COUNT (*) FROM " + tableName);
             rsCount.next();
             int size = rsCount.getInt(1);
             rsCount.close();

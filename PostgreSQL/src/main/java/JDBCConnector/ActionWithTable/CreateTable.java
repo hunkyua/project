@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -11,12 +11,14 @@ import java.sql.Statement;
  */
 public class CreateTable {
     JDBCConnector jdbc = new JDBCConnector();
+    Reader reader = new Reader();
     Connection connection;
 
     public void createDBUserTable() throws SQLException {
         Statement statement = null;
-
-        String createTableSQL = "CREATE TABLE TEST("
+        System.out.println("Enter tableName what do you want create:");
+        String tableName = reader.Reader();
+        String createTableSQL = "CREATE TABLE " + tableName + "("
                 + "ID serial PRIMARY KEY,"
                 + "USERNAME VARCHAR(20) NOT NULL, "
                 + "SURNAME VARCHAR(20) NOT NULL, "

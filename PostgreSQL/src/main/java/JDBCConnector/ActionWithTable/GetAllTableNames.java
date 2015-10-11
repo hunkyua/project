@@ -1,6 +1,6 @@
 package JDBCConnector.ActionWithTable;
 
-import JDBCConnector.JDBCConnector;
+import JDBCConnector.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -11,7 +11,7 @@ import java.util.Arrays;
 /**
  * Created by oktopus on 09.10.15.
  */
-public class GetTableNames {
+public class GetAllTableNames {
     JDBCConnector jdbc = new JDBCConnector();
     Connection connection;
 
