@@ -7,7 +7,10 @@
           <element id="module-output" name="Jetty" />
         </element>
         <element id="directory" name="lib">
+<<<<<<< HEAD
           <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:8.0.28" />
+=======
+>>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
         </element>
       </element>

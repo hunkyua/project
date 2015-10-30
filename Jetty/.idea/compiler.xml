@@ -18,15 +18,25 @@
         <processorPath useClasspath="true" />
       </profile>
       <profile default="false" name="Annotation profile for Jetty" enabled="true">
+<<<<<<< HEAD
         <sourceOutputDir name="target\generated-sources\annotations" />
         <sourceTestOutputDir name="target\generated-test-sources\test-annotations" />
+=======
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+>>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="Jetty" />
       </profile>
     </annotationProcessing>
+<<<<<<< HEAD
     <bytecodeTargetLevel target="1.8">
       <module name="Jetty" target="1.8" />
+=======
+    <bytecodeTargetLevel>
+      <module name="Jetty" target="1.7" />
+>>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
     </bytecodeTargetLevel>
   </component>
 </project>
