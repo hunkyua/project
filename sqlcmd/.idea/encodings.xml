@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="windows-1251">
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/Command.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/Connector.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/JDBCConnector.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/MainController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/View.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/ViewImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/command/Unsupported.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/test/java/sqlcmd/IntegrationTest.java" charset="UTF-8" />
+    <file url="PROJECT" charset="windows-1251" />
+  </component>
+</project>
