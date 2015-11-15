@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/main/java/MainServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/JDBCConnector.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/command/table/TableCreate.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/command/table/TableDelete.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/sqlcmd/command/table/TableSize.java" charset="UTF-8" />
+  </component>
+</project>
