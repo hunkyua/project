@@ -24,12 +24,12 @@
     </tr>
     <tr>
       <td></td>
-      <td align="center"><input type="submit" value="delete"/></td>
+      <td><input type="submit" value="delete"/></td>
     </tr>
   </form>
 </table>
-<p align="center"><%=TableDelete.doesNotExist%></p>
-<p align="center"><a href="/connect.jsp"><span class="error"><%=TableDelete.error%></span>Connect to DB</a> </p>
+<p id="error"><%=TableDelete.doesNotExist%></p>
+<p id="error"><a href="/connect.jsp"><span class="error"><%=TableDelete.error%></span></a></p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

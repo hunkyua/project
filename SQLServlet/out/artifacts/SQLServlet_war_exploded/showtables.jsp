@@ -31,8 +31,8 @@
 
 
 
-<p align="center"><%=TableNames.doesNotExist%></p>
-<p align="center"><a href="/connect.jsp"><span class="error"><%=TableNames.error%></span>Connect to DB</a> </p>
+<p id="error"><%=TableNames.doesNotExist%></p>
+<p id="error"><a href="/connect.jsp"><span class="error"><%=TableNames.error%></span></a> </p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

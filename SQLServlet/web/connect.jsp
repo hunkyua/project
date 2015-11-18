@@ -20,6 +20,7 @@
       <td>DBname</td>
       <td><input name ='db_name' type="text"/></td>
       </tr>
+
       <tr>
         <td>Username</td>
         <td><input name ='db_user' type="text"/></td>
@@ -34,7 +35,12 @@
       </tr>
   </form>
 </table>
-<p align="center"><%=JDBCConnector.error%></p>
-<%@include file="footer.jsp" %>
+
+<p id="er_connect"><a href="/registration.jsp"><%=JDBCConnector.er_connect%></a></p>
+<p id="error"><%=JDBCConnector.error%></p>
+<p><a href="index.jsp">Back</a></p>
+<p>Copyright 2015 Hunkbl4:)</p>
+
 </body>
+
 </html>

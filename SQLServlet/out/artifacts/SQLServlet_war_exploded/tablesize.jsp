@@ -25,15 +25,15 @@
     </tr>
     <tr>
       <td></td>
-      <td align="center"><input type="submit" value="select"/></td>
+      <td><input type="submit" value="select"/></td>
     </tr>
   </form>
 </table>
-<p align="center"><%=TableSize.size%></p>
+<p><%=TableSize.size%></p>
 
 
-<p align="center"><%=TableSize.doesNotExist%></p>
-<p align="center"><a href="/connect.jsp"><span class="error"><%=TableSize.error%></span>Connect to DB</a> </p>
+<p id="error"><%=TableSize.doesNotExist%></p>
+<p id="error"><a href="/connect.jsp"><span class="error"><%=TableSize.error%></span></a> </p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

@@ -33,8 +33,8 @@
 
 
 
-<p align="center"><%=TableCreate.doesNotExist%></p>
-<p align="center"><a href="/connect.jsp"><span class="error"><%=TableCreate.error%></span>Connect to DB</a> </p>
+<p id="error"><%=TableCreate.doesNotExist%></p>
+<p id="error"><a href="/connect.jsp"><span class="error"><%=TableCreate.error%></span></a> </p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

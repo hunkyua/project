@@ -1,4 +1,32 @@
 body {
-    background-color: #132128;
-    color: #ff050a;
+    background-color:  #1F1F1F;
+    color: yellow;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:140%;
+    text-align: center;
+}
+a {
+    color: #3fbe10;
+    font-size:140%;
+    text-align: center;
+}
+a:link{
+    color: green;
+}
+
+a:hover{
+    color: yellow;
+}
+a:visited {
+    color:darkslateblue ;
+}
+td {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:140%;
+    text-align: center;
+}
+p#error {
+    color: red;
 }

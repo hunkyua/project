@@ -27,7 +27,7 @@ public class TableCreate {
         } catch (SQLException e) {
             doesNotExist = e.getMessage();
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")){
-            error = ">>> Please ";
+            error = ">>> Please Connect to DB";
             }
         } finally {
             if (statement != null) {
