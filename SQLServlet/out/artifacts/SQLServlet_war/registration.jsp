@@ -1,4 +1,3 @@
-<%@ page import="sqlcmd.command.db.CreateUser" %>
 <%--
   Created by IntelliJ IDEA.
   User: Hunky
@@ -36,7 +35,6 @@
   </form>
 </table>
 
-<p id="error"><%=CreateUser.error%></p>
 <p><a href="index.jsp">Back</a></p>
 <p>Copyright 2015 Hunkbl4:)</p>
 </body>

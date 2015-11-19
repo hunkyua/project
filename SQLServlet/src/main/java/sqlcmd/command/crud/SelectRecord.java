@@ -16,8 +16,7 @@ public class SelectRecord {
     public static String doesNotExist = "";
     public static String line = "";
     public static String line2= "";
-    public static List<Object> list = new ArrayList<>();
-    public static List<String> list2 = new ArrayList<>();
+    public static List<String> list = new ArrayList<>();
 
     public static void SelectRecordInTable(String tableName, String select) throws ClassNotFoundException, SQLException {
         Statement statement = null;
@@ -30,7 +29,7 @@ public class SelectRecord {
             statement.execute(selectInTable);
             ResultSet rs = statement.executeQuery(selectInTable);
             line2 = "<td>ID</td><td>USERNAME</td><td>SURNAME</td><tr></tr>";
-            list2.add(line2);
+            list.add(line2);
 
             while (rs.next()) {
 
@@ -41,7 +40,7 @@ public class SelectRecord {
                 line = "<p align=\"center\">" + "<td>" + id  + "</td>" + " "+ "<td>" + username + "</td>" + " "
                         + "<td>" + surname + "</td>" + "<tr>"+ "</tr>" + "</p>" ;
 
-                list2.add(line);
+                list.add(line);
 
             }
         } catch (SQLException e) {

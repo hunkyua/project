@@ -29,7 +29,7 @@ public class ClearAllData {
 
         SelectRecord.error = "";
         SelectRecord.doesNotExist = "";
-        SelectRecord.list2 = new ArrayList<>() ;
+        SelectRecord.list = new ArrayList<>() ;
 
         DeleteRecord.error = "";
         DeleteRecord.doesNotExist = "";

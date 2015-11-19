@@ -1,5 +1,3 @@
-<%@ page import="org.springframework.context.support.ClassPathXmlApplicationContext" %>
-<%@ page import="sqlcmd.ClearAllData" %>
 <%--
   Created by IntelliJ IDEA.
   User: Hunky
@@ -23,13 +21,10 @@
 
   <h1 align="center">Welcome to DB Manager</h1>
   <p><a href="connect.jsp">Connect to DB</a></p>
-  <p><a href="registration.jsp">Create new User</a></p><br>
-  <p><a href="help.jsp">Help</a></p>
+  <p><a href="registration.jsp" style="font-size: 120%">Create new User</a></p><br>
+  <p><a href="help.jsp" style="color: greenyellow">Help</a></p>
   <p id="footer">Copyright 2015 Hunkbl4:)</p>
 
   </body>
 
-<%ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"config.xml"});%>
-<%ClearAllData clearAllData = (ClearAllData) context.getBean("clear");%>
-<%clearAllData.clear();%>
 </html>

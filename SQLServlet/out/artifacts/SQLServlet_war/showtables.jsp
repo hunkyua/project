@@ -1,4 +1,3 @@
-<%@ page import="sqlcmd.command.table.TableNames" %>
 <%--
   Created by IntelliJ IDEA.
   User: Hunky
@@ -20,7 +19,7 @@
   <form action="showtables" method="get">
     <tr>
       <td>Name of tables:</td>
-      <td><p align="center"><%=TableNames.toString(TableNames.tables)%></p></td>
+      <td><p align="center">${tableNames}</p></td>
     </tr>
     <tr>
       <td></td>
@@ -30,7 +29,7 @@
 </table>
 
 <p id="error">${doesNotExist}</p>
-<p id="error"><a href="/connect.jsp">${error}</a></p>
+<p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

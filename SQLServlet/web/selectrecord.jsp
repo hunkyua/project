@@ -35,7 +35,7 @@
 
 <table border="1" align="center" cellpadding="5">
   <tr>
-     <c:forEach items="<%=SelectRecord.list2%>" var="line" >
+     <c:forEach items="${list}" var="line" >
        ${line}
      </c:forEach>
   </tr>
@@ -43,7 +43,7 @@
 
 
 <p id="error">${doesNotExist}</p>
-<p id="error"><a href="/connect.jsp">${error}</a></p>
+<p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

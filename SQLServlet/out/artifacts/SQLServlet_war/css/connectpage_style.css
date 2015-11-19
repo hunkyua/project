@@ -30,6 +30,10 @@ td {
 p#error {
     color: red;
 }
+p#r_error {
+
+    color: red;
+}
 
 p#footer {
     font-family: 'Times New Roman', Times, serif;

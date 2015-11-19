@@ -38,7 +38,7 @@
   </form>
 </table>
 <p id="error">${doesNotExist}</p>
-<p id="error"><a href="/connect.jsp">${error}</a></p>
+<p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp" %>
 </body>
 </html>

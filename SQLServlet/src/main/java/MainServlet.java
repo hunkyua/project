@@ -23,7 +23,7 @@ import java.sql.SQLException;
  * Created by Hunky on 12.11.2015.
  */
 public class MainServlet extends HttpServlet {
-    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"config.xml"});
+    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"config.xml"});
     ClearAllData clearAllData = (ClearAllData) context.getBean("clear");
 
     @Override
@@ -152,10 +152,12 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/selectrecord")) {
             String table_name = request.getParameter("table_name");
             String select = request.getParameter("select");
+            clearAllData.clear();
             try {
                 SelectRecord.SelectRecordInTable(table_name, select);
                 request.setAttribute("doesNotExist", SelectRecord.doesNotExist);
                 request.setAttribute("error", SelectRecord.error);
+                request.setAttribute("list", SelectRecord.list);
                 request.getRequestDispatcher("selectrecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("selectrecord.jsp"));
             } catch (ClassNotFoundException e) {
@@ -234,6 +236,7 @@ public class MainServlet extends HttpServlet {
                 TableNames.GetAllTableNames();
                 request.setAttribute("doesNotExist", TableNames.doesNotExist);
                 request.setAttribute("error", TableNames.error);
+                request.setAttribute("tableNames", TableNames.toString(TableNames.tables));
                 request.getRequestDispatcher("showtables.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("showtables.jsp"));
             } catch (SQLException e) {
