@@ -1,3 +1,4 @@
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import sqlcmd.JDBCConnector;
 import sqlcmd.ClearAllData;
 import sqlcmd.command.crud.DeleteRecord;
@@ -22,9 +23,12 @@ import java.sql.SQLException;
  * Created by Hunky on 12.11.2015.
  */
 public class MainServlet extends HttpServlet {
+    ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"config.xml"});
+    ClearAllData clearAllData = (ClearAllData) context.getBean("clear");
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 
         String action = getAction(request);
 
@@ -32,7 +36,7 @@ public class MainServlet extends HttpServlet {
             String db_name = request.getParameter("db_name");
             String db_user = request.getParameter("db_user");
             String db_password = request.getParameter("db_password");
-            ClearAllData.clear();
+            clearAllData.clear();
 
             try {
                 new JDBCConnector(db_name, db_user, db_password);
@@ -48,11 +52,14 @@ public class MainServlet extends HttpServlet {
                     JDBCConnector.error = "Incorrect data. Try again!";
                 }
                 if (SQLExc) {
+                    request.setAttribute("error", JDBCConnector.error);
+                    request.setAttribute("er_connect", JDBCConnector.er_connect);
+                    request.getRequestDispatcher("connect.jsp").forward(request, response);
                     response.sendRedirect("connect.jsp");
                 }
             } catch (Exception e) {
                 request.setAttribute("message", e.getMessage());
-                request.getRequestDispatcher("error.jsp").forward(request, response);
+                request.getRequestDispatcher("connect.jsp").forward(request, response);
             }
         }
 
@@ -61,7 +68,7 @@ public class MainServlet extends HttpServlet {
             String db_name = request.getParameter("db_name");
             String db_user = request.getParameter("db_user");
             String db_password = request.getParameter("db_password");
-            ClearAllData.clear();
+            clearAllData.clear();
 
             try {
                 new JDBCConnector("postgres", "postgres", "1336");
@@ -92,6 +99,9 @@ public class MainServlet extends HttpServlet {
             String surname = request.getParameter("surname");
             try {
                 UpdateRecord.UpdateRecordInTable(table_name, id, username, surname);
+                request.setAttribute("doesNotExist", UpdateRecord.doesNotExist);
+                request.setAttribute("error", UpdateRecord.error);
+                request.getRequestDispatcher("updaterecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("updaterecord.jsp"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -108,6 +118,9 @@ public class MainServlet extends HttpServlet {
             String surname = request.getParameter("surname");
             try {
                 InsertRecord.InsertRecordInTable(table_name, username, surname);
+                request.setAttribute("doesNotExist", InsertRecord.doesNotExist);
+                request.setAttribute("error", InsertRecord.error);
+                request.getRequestDispatcher("insertrecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("insertrecord.jsp"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -123,6 +136,9 @@ public class MainServlet extends HttpServlet {
             Integer id = Integer.valueOf(request.getParameter("id"));
             try {
                 DeleteRecord.DeleteRecordInTable(table_name, id);
+                request.setAttribute("doesNotExist", DeleteRecord.doesNotExist);
+                request.setAttribute("error", DeleteRecord.error);
+                request.getRequestDispatcher("deleterecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("deleterecord.jsp"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -138,6 +154,9 @@ public class MainServlet extends HttpServlet {
             String select = request.getParameter("select");
             try {
                 SelectRecord.SelectRecordInTable(table_name, select);
+                request.setAttribute("doesNotExist", SelectRecord.doesNotExist);
+                request.setAttribute("error", SelectRecord.error);
+                request.getRequestDispatcher("selectrecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("selectrecord.jsp"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -166,6 +185,9 @@ public class MainServlet extends HttpServlet {
             String create_table = request.getParameter("create_table");
             try {
                 TableCreate.CreateTable(create_table);
+                request.setAttribute("doesNotExist", TableCreate.doesNotExist);
+                request.setAttribute("error", TableCreate.error);
+                request.getRequestDispatcher("createtable.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("createtable.jsp"));
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
@@ -180,6 +202,9 @@ public class MainServlet extends HttpServlet {
             String delete_table = request.getParameter("delete_table");
             try {
                 TableDelete.DeleteTable(delete_table);
+                request.setAttribute("doesNotExist", TableDelete.doesNotExist);
+                request.setAttribute("error", TableDelete.error);
+                request.getRequestDispatcher("deletetable.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("deletetable.jsp"));
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -192,6 +217,10 @@ public class MainServlet extends HttpServlet {
             String name_table = request.getParameter("name_table");
             try {
                 TableSize.GetTableSize(name_table);
+                request.setAttribute("doesNotExist", TableSize.doesNotExist);
+                request.setAttribute("error", TableSize.error);
+                request.setAttribute("size", TableSize.size);
+                request.getRequestDispatcher("tablesize.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("tablesize.jsp"));
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -203,6 +232,9 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/showtables")) {
             try {
                 TableNames.GetAllTableNames();
+                request.setAttribute("doesNotExist", TableNames.doesNotExist);
+                request.setAttribute("error", TableNames.error);
+                request.getRequestDispatcher("showtables.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("showtables.jsp"));
             } catch (SQLException e) {
                 e.printStackTrace();

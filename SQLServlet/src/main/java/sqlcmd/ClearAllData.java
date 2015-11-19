@@ -17,7 +17,10 @@ import java.util.ArrayList;
  * Created by Hunky on 15.11.2015.
  */
 public class ClearAllData {
-    public static void clear() {
+    public void clear() {
+        JDBCConnector.er_connect = "";
+        JDBCConnector.error = "";
+
         CreateDB.error = "";
         CreateDB.doesNotExist = "";
 

@@ -37,33 +37,16 @@ public class SelectRecord {
                 String id = rs.getString("ID");
                 String username = rs.getString("USERNAME");
                 String surname = rs.getString("SURNAME");
-                if (!(id.equals(null) || id.equals(""))) {
-                list.add(id);
-                }
-                if (!(username.equals(null) || username.equals(""))) {
-                    list.add(username);
-                }
-                if (!(surname.equals(null) || surname.equals(""))) {
-                    list.add(surname);
-                }
-                if (id.equals(null) || id.equals("")) {
-                    line = username + "</td>" + " " + "<td>" + surname + "</td>" + "<tr>"+ "</tr>" + "</p>" ;
-                }
-                if (username.equals(null) || username.equals("")) {
-                    line = "<p align=\"center\">" + "<td>" + id  + "</td>" + " "+ "<td>" + surname + "</td>" + "<tr>"+ "</tr>" + "</p>" ;                }
-                if (surname.equals(null) || surname.equals("")) {
-                    line = "<p align=\"center\">" + "<td>" + id  + "</td>" + " "+ "<td>" + username + "</td>";
-                }
-                else {
+
                 line = "<p align=\"center\">" + "<td>" + id  + "</td>" + " "+ "<td>" + username + "</td>" + " "
                         + "<td>" + surname + "</td>" + "<tr>"+ "</tr>" + "</p>" ;
-                }
+
                 list2.add(line);
 
             }
         } catch (SQLException e) {
             doesNotExist = e.getMessage();
-            if (doesNotExist.equals("Ñåðâåð çàïðîñèë ïàðîëüíóþ àóòåíòèôèêàöèþ, íî ïàðîëü íå áûë óêàçàí.")) {
+            if (doesNotExist.equals("Ð¡ÐµÑ€Ð²ÐµÑ€ Ð·Ð°Ð¿Ñ€Ð¾ÑÐ¸Ð» Ð¿Ð°Ñ€Ð¾Ð»ÑŒÐ½ÑƒÑŽ Ð°ÑƒÑ‚ÐµÐ½Ñ‚Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸ÑŽ, Ð½Ð¾ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ Ð½Ðµ Ð±Ñ‹Ð» ÑƒÐºÐ°Ð·Ð°Ð½.")) {
                 error = ">>> Please Connect to DB";
             }
         } finally {

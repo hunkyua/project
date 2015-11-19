@@ -25,7 +25,7 @@ public class InsertRecord {
             statement.execute(insertInTable);
         } catch (SQLException e) {
             doesNotExist = e.getMessage();
-            if (doesNotExist.equals("Ñåðâåð çàïðîñèë ïàðîëüíóþ àóòåíòèôèêàöèþ, íî ïàðîëü íå áûë óêàçàí.")) {
+            if (doesNotExist.equals("Ð¡ÐµÑ€Ð²ÐµÑ€ Ð·Ð°Ð¿Ñ€Ð¾ÑÐ¸Ð» Ð¿Ð°Ñ€Ð¾Ð»ÑŒÐ½ÑƒÑŽ Ð°ÑƒÑ‚ÐµÐ½Ñ‚Ð¸Ñ„Ð¸ÐºÐ°Ñ†Ð¸ÑŽ, Ð½Ð¾ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ Ð½Ðµ Ð±Ñ‹Ð» ÑƒÐºÐ°Ð·Ð°Ð½.")) {
                 error = ">>> Please Connect to DB";
             }
         } finally {
