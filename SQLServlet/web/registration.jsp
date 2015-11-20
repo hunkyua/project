@@ -10,7 +10,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/connectpage_style.css" media="all">
 <head>
-  <title>createuser</title>
+  <title>Registration</title>
 </head>
 <body>
 <table border="1" align="center">

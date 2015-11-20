@@ -12,7 +12,7 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 <head>
-  <title>tablesize</title>
+  <title>TableSize</title>
 </head>
 <body>
 <table border="1" align="center">

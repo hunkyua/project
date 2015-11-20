@@ -11,7 +11,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 <head>
-    <title>showtables</title>
+    <title>ShowTables</title>
 </head>
 <body>
 <table border="1" align="center">

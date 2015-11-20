@@ -8,7 +8,14 @@
         <constructor-arg value="Hi!"/>
         <property name="name" value="Alice"/>
     </bean>
-    <bean id="clear" class="sqlcmd.ClearAllData">
 
+    <bean id="clear" class="sqlcmd.ClearAllData">
+    </bean>
+
+    <bean id="tableNames" class="sqlcmd.command.table.TableNames">
+    </bean>
+    <bean id="tableSize" class="sqlcmd.command.table.TableSize">
+    </bean>
+    <bean id="tableCreate" class="sqlcmd.command.table.TableCreate">
     </bean>
 </beans>

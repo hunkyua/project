@@ -19,12 +19,12 @@ public class UpdateRecord {
                 + " SURNAME = '"+surname+"' "
                 + "WHERE ID ="+id;
         try {
-            doesNotExist = "";
+            doesNotExist = String.format("Record id:\"%s\" in table:\"%s\" updated", id, tableName );
             error = "";
             statement = JDBCConnector.getConnection().createStatement();
             statement.execute(updateInTable);
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but record id: \"%s\" in table:\"%s\" can't be updated. Try again", id, tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")) {
                 error = ">>> Please Connect to DB";
             }

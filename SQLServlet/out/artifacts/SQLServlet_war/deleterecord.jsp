@@ -10,7 +10,7 @@
 <html>
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 <head>
-  <title>Deleterecord</title>
+  <title>DeleteRecord</title>
 </head>
 <body>
 <table border="1" align="center">

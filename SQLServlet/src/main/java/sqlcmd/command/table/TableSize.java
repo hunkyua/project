@@ -15,7 +15,7 @@ public class TableSize {
     public static String doesNotExist = "";
 
 
-    public static void GetTableSize(String tableName) throws ClassNotFoundException, SQLException {
+    public void GetTableSize(String tableName) throws ClassNotFoundException, SQLException {
         Statement statement = null;
         try {
             doesNotExist = "";
@@ -25,10 +25,10 @@ public class TableSize {
             ResultSet rsCount = statement.executeQuery("SELECT COUNT (*) FROM " + tableName);
             rsCount.next();
             int a = rsCount.getInt(1);
-            size = "Size of table = " + Integer.toString(a);
+            size = String.format("Size of table:\"%s\" = ", tableName) + Integer.toString(a);
             rsCount.close();
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but table:\"%s\" doesn't exist. Try again", tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")) {
                 error = ">>> Please Connect to DB";
             }

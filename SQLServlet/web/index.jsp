@@ -13,7 +13,7 @@
 
 <head>
 
-  <title>DB Manager</title>
+  <title>DB_Manager</title>
 
 </head>
 

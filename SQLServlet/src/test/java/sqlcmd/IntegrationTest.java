@@ -19,21 +19,7 @@ public class IntegrationTest {
         // when
 
         // then
-        assertOut("Welcome to: \n" +
-                "     __________________________   \n" +
-                "    /  ssss   qqqq      ll    /   \n" +
-                "   / ss     qq  qq     ll    /    \n" +
-                "  /  sss   qq  qq     ll    /     \n" +
-                " /    ss  qq  qq     ll    /      \n" +
-                "/  ssss   qqqq qqq  lllll /       \n" +
-                "--------------------------        \n" +
-                "Please enter db_name: \n" +
-                "sqlcmd\n" +
-                "Please enter db_user\n" +
-                "errorUser\n" +
-                "Please enter db_password: \n" +
-                "errorUser\n" +
-                "Connection failed: FATAL: password authentication failed for user \"errorUser\"\n");
+        assertOut("");
     }
 
     @Test
@@ -100,56 +86,7 @@ public class IntegrationTest {
 
 
         // then
-        assertOut("Welcome to: \n" +
-                "     __________________________   \n" +
-                "    /  ssss   qqqq      ll    /   \n" +
-                "   / ss     qq  qq     ll    /    \n" +
-                "  /  sss   qq  qq     ll    /     \n" +
-                " /    ss  qq  qq     ll    /      \n" +
-                "/  ssss   qqqq qqq  lllll /       \n" +
-                "--------------------------        \n" +
-                "Please enter db_name: \n" +
-                "sqlcmd\n" +
-                "Please enter db_user\n" +
-                "postgres\n" +
-                "Please enter db_password: \n" +
-                "postgres\n" +
-                "Connection complete!\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "1\n" +
-                "Enter tableName what do you want create:\n" +
-                "%s\n" +
-                "CREATE TABLE %s(ID serial PRIMARY KEY,USERNAME VARCHAR(20) NOT NULL, SURNAME VARCHAR(20) NOT NULL, CREATE_DATE DATE NOT NULL )\n" +
-                "Create table \"test\" is coplete!\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "7\n" +
-                "[%s, test, user]\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "8\n" +
-                "Enter tableName what do you want getTableSize:\n" +
-                "%s\n" +
-                "***********************************\n" +
-                "** Quantity of records in table = 0 **\n" +
-                "***********************************\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "2\n" +
-                "Enter tableName what do you want delete:\n" +
-                "%s\n" +
-                "DROP TABLE %s\n" +
-                "Delete table \"test\" is complete!\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "7\n" +
-                "[test, user]\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "888\n" +
-                "******************************\n" +
-                "**** Unsupported command *****\n" +
-                "******************************\n" +
-                "Enter command 1...9 (or 0 for help) :\n" +
-                "9\n" +
-                "*****************************\n" +
-                "*********  Goodbye  *********\n" +
-                "*****************************\n", tableName);
+        assertOut(tableName);
     }
 
     private void enterBadCommand() {

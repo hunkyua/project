@@ -1,6 +1,6 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import sqlcmd.JDBCConnector;
 import sqlcmd.ClearAllData;
+import sqlcmd.JDBCConnector;
 import sqlcmd.command.crud.DeleteRecord;
 import sqlcmd.command.crud.InsertRecord;
 import sqlcmd.command.crud.SelectRecord;
@@ -24,11 +24,12 @@ import java.sql.SQLException;
  */
 public class MainServlet extends HttpServlet {
     ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"config.xml"});
-    ClearAllData clearAllData = (ClearAllData) context.getBean("clear");
-
+    ClearAllData clearAllDataBean = (ClearAllData) context.getBean("clear");
+    TableNames tableNamesBean = (TableNames) context.getBean("tableNames");
+    TableSize tableSizeBean = (TableSize) context.getBean("tableSize");
+    TableCreate tableCreateBean = (TableCreate) context.getBean("tableCreate");
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
 
         String action = getAction(request);
 
@@ -36,7 +37,7 @@ public class MainServlet extends HttpServlet {
             String db_name = request.getParameter("db_name");
             String db_user = request.getParameter("db_user");
             String db_password = request.getParameter("db_password");
-            clearAllData.clear();
+            clearAllDataBean.clear();
 
             try {
                 new JDBCConnector(db_name, db_user, db_password);
@@ -49,7 +50,7 @@ public class MainServlet extends HttpServlet {
                 } catch (SQLException e) {
                     SQLExc = true;
                     JDBCConnector.er_connect = "If you not have account: Register please!";
-                    JDBCConnector.error = "Incorrect data. Try again!";
+                    JDBCConnector.error = String.format("Can't get connection to database:\"%s\" user:\"%s\"", db_name, db_user);
                 }
                 if (SQLExc) {
                     request.setAttribute("error", JDBCConnector.error);
@@ -68,7 +69,7 @@ public class MainServlet extends HttpServlet {
             String db_name = request.getParameter("db_name");
             String db_user = request.getParameter("db_user");
             String db_password = request.getParameter("db_password");
-            clearAllData.clear();
+            clearAllDataBean.clear();
 
             try {
                 new JDBCConnector("postgres", "postgres", "1336");
@@ -152,7 +153,7 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/selectrecord")) {
             String table_name = request.getParameter("table_name");
             String select = request.getParameter("select");
-            clearAllData.clear();
+            clearAllDataBean.clear();
             try {
                 SelectRecord.SelectRecordInTable(table_name, select);
                 request.setAttribute("doesNotExist", SelectRecord.doesNotExist);
@@ -183,10 +184,10 @@ public class MainServlet extends HttpServlet {
         String action = getAction(request);
         response.setContentType("text/html; charset=utf-8");
 
-        if (action.startsWith("/create")) {
+        if (action.startsWith("/createTable")) {
             String create_table = request.getParameter("create_table");
             try {
-                TableCreate.CreateTable(create_table);
+                tableCreateBean.CreateTable(create_table);
                 request.setAttribute("doesNotExist", TableCreate.doesNotExist);
                 request.setAttribute("error", TableCreate.error);
                 request.getRequestDispatcher("createtable.jsp").forward(request, response);
@@ -218,7 +219,7 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/tablesize")) {
             String name_table = request.getParameter("name_table");
             try {
-                TableSize.GetTableSize(name_table);
+                tableSizeBean.GetTableSize(name_table);
                 request.setAttribute("doesNotExist", TableSize.doesNotExist);
                 request.setAttribute("error", TableSize.error);
                 request.setAttribute("size", TableSize.size);
@@ -233,7 +234,7 @@ public class MainServlet extends HttpServlet {
 
         if (action.startsWith("/showtables")) {
             try {
-                TableNames.GetAllTableNames();
+                tableNamesBean.GetAllTableNames();
                 request.setAttribute("doesNotExist", TableNames.doesNotExist);
                 request.setAttribute("error", TableNames.error);
                 request.setAttribute("tableNames", TableNames.toString(TableNames.tables));

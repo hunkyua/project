@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class TableCreate {
     public static String error = "";
     public static String doesNotExist = "";
-    public static void CreateTable(String tableName) throws SQLException, ClassNotFoundException {
+    public void CreateTable(String tableName) throws SQLException, ClassNotFoundException {
         Statement statement = null;
 
         String createTableSQL = "CREATE TABLE " + tableName + "("
@@ -20,12 +20,12 @@ public class TableCreate {
                 + "SURNAME VARCHAR(20) NOT NULL "
                 + ")";
         try {
-            doesNotExist = "";
+            doesNotExist = String.format("Table:\"%s\" created", tableName);
             error = "";
             statement = JDBCConnector.getConnection().createStatement();
             statement.execute(createTableSQL);
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but table:\"%s\" can't be created. Try again", tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")){
             error = ">>> Please Connect to DB";
             }

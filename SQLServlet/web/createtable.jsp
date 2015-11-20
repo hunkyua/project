@@ -11,12 +11,12 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
 
 <head>
-    <title>Createtable</title>
+    <title>CreateTable</title>
 </head>
 <body>
 <table border="1" align="center">
 
-  <form action="create" method="get">
+  <form action="createTable" method="get">
     <tr>
       <td>Name of table:</td>
       <td><input name ='create_table' type="text"/></td>

@@ -19,12 +19,13 @@ public class InsertRecord {
                 + "('"+ username +"', '" + surname + "')";
 
         try {
-            doesNotExist = "";
+            doesNotExist = String.format("Record username:\"%s\" surname:\"%s\" in table:\"%s\" inserted", username, surname, tableName);
             error = "";
             statement = JDBCConnector.getConnection().createStatement();
             statement.execute(insertInTable);
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but record username:\"%s\" surname:\"%s\" in table:\"%s\" can't be inserted." +
+                    " Try again", username, surname, tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")) {
                 error = ">>> Please Connect to DB";
             }

@@ -23,7 +23,7 @@ public class SelectRecord {
         String selectInTable = "SELECT " + select + " FROM " + tableName;
 
         try {
-            doesNotExist = "";
+            doesNotExist = String.format("Record in table:\"%s\"", tableName);
             error = "";
             statement = JDBCConnector.getConnection().createStatement();
             statement.execute(selectInTable);
@@ -44,7 +44,7 @@ public class SelectRecord {
 
             }
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but record in table:\"%s\" can't be selected. Try again", tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")) {
                 error = ">>> Please Connect to DB";
             }

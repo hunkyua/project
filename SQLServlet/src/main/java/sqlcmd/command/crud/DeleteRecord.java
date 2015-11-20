@@ -17,12 +17,12 @@ public class DeleteRecord {
         String deleteInTable = "DELETE FROM " + tableName + " WHERE ID =" + id;
 
         try {
-            doesNotExist = "";
+            doesNotExist = String.format("Record id:\"%s\" in table:\"%s\" deleted", id, tableName);
             error = "";
             statement = JDBCConnector.getConnection().createStatement();
             statement.execute(deleteInTable);
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but record id:\"%s\" in table:\"%s\" can't be deleted. Try again", id, tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")) {
                 error = ">>> Please Connect to DB";
             }
@@ -32,4 +32,5 @@ public class DeleteRecord {
             }
         }
     }
+
 }

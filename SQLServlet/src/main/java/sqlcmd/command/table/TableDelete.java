@@ -16,12 +16,12 @@ public class TableDelete {
         String deleteTableSQL = "DROP TABLE " + tableName;
 
         try {
-            doesNotExist = "";
+            doesNotExist = String.format("Table:\"%s\" deleted", tableName);
             error = "";
             statement = JDBCConnector.getConnection().createStatement();
             statement.execute(deleteTableSQL);
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
+            doesNotExist = String.format("Sorry, but table:\"%s\" can't be deleted. Try again", tableName);
             if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")){
             error = ">>> Please Connect to DB";
             }
