@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class TableCreate {
     public static String error = "";
     public static String doesNotExist = "";
-    public void CreateTable(String tableName) throws SQLException, ClassNotFoundException {
+    public void createTable(String tableName) throws SQLException, ClassNotFoundException {
         Statement statement = null;
 
         String createTableSQL = "CREATE TABLE " + tableName + "("

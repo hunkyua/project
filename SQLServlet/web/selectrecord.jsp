@@ -1,4 +1,4 @@
-<%@ page import="sqlcmd.command.crud.SelectRecord" %>
+<%@ page import="sqlcmd.command.crud.RecordSelect" %>
 
 <%--
   Created by IntelliJ IDEA.

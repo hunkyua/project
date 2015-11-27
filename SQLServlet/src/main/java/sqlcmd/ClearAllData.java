@@ -1,9 +1,9 @@
 package sqlcmd;
 
-import sqlcmd.command.crud.DeleteRecord;
-import sqlcmd.command.crud.InsertRecord;
-import sqlcmd.command.crud.SelectRecord;
-import sqlcmd.command.crud.UpdateRecord;
+import sqlcmd.command.crud.RecordDelete;
+import sqlcmd.command.crud.RecordInsert;
+import sqlcmd.command.crud.RecordSelect;
+import sqlcmd.command.crud.RecordUpdate;
 import sqlcmd.command.db.CreateDB;
 import sqlcmd.command.db.CreateUser;
 import sqlcmd.command.table.TableCreate;
@@ -27,18 +27,18 @@ public class ClearAllData {
         CreateUser.error = "";
         CreateUser.doesNotExist = "";
 
-        SelectRecord.error = "";
-        SelectRecord.doesNotExist = "";
-        SelectRecord.list = new ArrayList<>() ;
+        RecordSelect.error = "";
+        RecordSelect.doesNotExist = "";
+        RecordSelect.list = new ArrayList<>() ;
 
-        DeleteRecord.error = "";
-        DeleteRecord.doesNotExist = "";
+        RecordDelete.error = "";
+        RecordDelete.doesNotExist = "";
 
-        InsertRecord.error = "";
-        InsertRecord.doesNotExist = "";
+        RecordInsert.error = "";
+        RecordInsert.doesNotExist = "";
 
-        UpdateRecord.error = "";
-        UpdateRecord.doesNotExist = "";
+        RecordUpdate.error = "";
+        RecordUpdate.doesNotExist = "";
 
         TableCreate.error = "";
         TableCreate.doesNotExist = "";

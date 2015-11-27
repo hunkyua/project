@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class CreateDB {
     public static String error = "";
     public static String doesNotExist = "";
-    public static void DBCreate(String db_name, String db_user) throws SQLException, ClassNotFoundException {
+    public static void dbCreate(String db_name, String db_user) throws SQLException, ClassNotFoundException {
         Statement statement = null;
 
         String createDB = "CREATE DATABASE " + db_name + " OWNER " + db_user;

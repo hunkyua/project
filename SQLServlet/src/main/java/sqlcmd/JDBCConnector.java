@@ -24,6 +24,12 @@ public class JDBCConnector {
         db_password = p;
     }
 
+    public JDBCConnector() {  //Settings for test
+        db_name = "postgres";
+        db_user = "postgres";
+        db_password = "1336";
+    }
+
     public static Connection getConnection() throws ClassNotFoundException, SQLException {
         Class.forName(DB_DRIVER);
         return DriverManager.getConnection(DB_URL + db_name, db_user, db_password);

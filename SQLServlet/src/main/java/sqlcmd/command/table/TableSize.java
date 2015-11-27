@@ -15,7 +15,7 @@ public class TableSize {
     public static String doesNotExist = "";
 
 
-    public void GetTableSize(String tableName) throws ClassNotFoundException, SQLException {
+    public void getTableSize(String tableName) throws ClassNotFoundException, SQLException {
         Statement statement = null;
         try {
             doesNotExist = "";

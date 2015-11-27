@@ -1,10 +1,10 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import sqlcmd.ClearAllData;
 import sqlcmd.JDBCConnector;
-import sqlcmd.command.crud.DeleteRecord;
-import sqlcmd.command.crud.InsertRecord;
-import sqlcmd.command.crud.SelectRecord;
-import sqlcmd.command.crud.UpdateRecord;
+import sqlcmd.command.crud.RecordDelete;
+import sqlcmd.command.crud.RecordInsert;
+import sqlcmd.command.crud.RecordSelect;
+import sqlcmd.command.crud.RecordUpdate;
 import sqlcmd.command.db.CreateDB;
 import sqlcmd.command.db.CreateUser;
 import sqlcmd.command.table.TableCreate;
@@ -23,11 +23,18 @@ import java.sql.SQLException;
  * Created by Hunky on 12.11.2015.
  */
 public class MainServlet extends HttpServlet {
+
     ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"config.xml"});
     ClearAllData clearAllDataBean = (ClearAllData) context.getBean("clear");
     TableNames tableNamesBean = (TableNames) context.getBean("tableNames");
     TableSize tableSizeBean = (TableSize) context.getBean("tableSize");
     TableCreate tableCreateBean = (TableCreate) context.getBean("tableCreate");
+    TableDelete tableDeleteBean = (TableDelete) context.getBean("tableDelete");
+    RecordDelete recordDeleteBean = (RecordDelete) context.getBean("recordDelete");
+    RecordInsert recordInsertBean = (RecordInsert) context.getBean("recordInsert");
+    RecordSelect recordSelectBean = (RecordSelect) context.getBean("recordSelect");
+    RecordUpdate recordUpdateBean = (RecordUpdate) context.getBean("recordUpdate");
+
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -75,8 +82,8 @@ public class MainServlet extends HttpServlet {
                 new JDBCConnector("postgres", "postgres", "1336");
                 boolean SQLExc = false;
                 try {
-                    CreateUser.UserCreate(db_user, db_password);
-                    CreateDB.DBCreate(db_name, db_user);
+                    CreateUser.userCreate(db_user, db_password);
+                    CreateDB.dbCreate(db_name, db_user);
                     response.sendRedirect(response.encodeRedirectURL("connect.jsp"));
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
@@ -99,9 +106,9 @@ public class MainServlet extends HttpServlet {
             String username = request.getParameter("username");
             String surname = request.getParameter("surname");
             try {
-                UpdateRecord.UpdateRecordInTable(table_name, id, username, surname);
-                request.setAttribute("doesNotExist", UpdateRecord.doesNotExist);
-                request.setAttribute("error", UpdateRecord.error);
+                recordUpdateBean.updateRecordInTable(table_name, id, username, surname);
+                request.setAttribute("doesNotExist", RecordUpdate.doesNotExist);
+                request.setAttribute("error", RecordUpdate.error);
                 request.getRequestDispatcher("updaterecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("updaterecord.jsp"));
             } catch (ClassNotFoundException e) {
@@ -118,9 +125,9 @@ public class MainServlet extends HttpServlet {
             String username = request.getParameter("username");
             String surname = request.getParameter("surname");
             try {
-                InsertRecord.InsertRecordInTable(table_name, username, surname);
-                request.setAttribute("doesNotExist", InsertRecord.doesNotExist);
-                request.setAttribute("error", InsertRecord.error);
+                recordInsertBean.insertRecordInTable(table_name, username, surname);
+                request.setAttribute("doesNotExist", RecordInsert.doesNotExist);
+                request.setAttribute("error", RecordInsert.error);
                 request.getRequestDispatcher("insertrecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("insertrecord.jsp"));
             } catch (ClassNotFoundException e) {
@@ -136,9 +143,9 @@ public class MainServlet extends HttpServlet {
             String table_name = request.getParameter("table_name");
             Integer id = Integer.valueOf(request.getParameter("id"));
             try {
-                DeleteRecord.DeleteRecordInTable(table_name, id);
-                request.setAttribute("doesNotExist", DeleteRecord.doesNotExist);
-                request.setAttribute("error", DeleteRecord.error);
+                recordDeleteBean.deleteRecordInTable(table_name, id);
+                request.setAttribute("doesNotExist", RecordDelete.doesNotExist);
+                request.setAttribute("error", RecordDelete.error);
                 request.getRequestDispatcher("deleterecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("deleterecord.jsp"));
             } catch (ClassNotFoundException e) {
@@ -155,10 +162,10 @@ public class MainServlet extends HttpServlet {
             String select = request.getParameter("select");
             clearAllDataBean.clear();
             try {
-                SelectRecord.SelectRecordInTable(table_name, select);
-                request.setAttribute("doesNotExist", SelectRecord.doesNotExist);
-                request.setAttribute("error", SelectRecord.error);
-                request.setAttribute("list", SelectRecord.list);
+                recordSelectBean.selectRecordInTable(table_name, select);
+                request.setAttribute("doesNotExist", RecordSelect.doesNotExist);
+                request.setAttribute("error", RecordSelect.error);
+                request.setAttribute("list", RecordSelect.list);
                 request.getRequestDispatcher("selectrecord.jsp").forward(request, response);
                 response.sendRedirect(response.encodeRedirectURL("selectrecord.jsp"));
             } catch (ClassNotFoundException e) {
@@ -187,7 +194,7 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/createTable")) {
             String create_table = request.getParameter("create_table");
             try {
-                tableCreateBean.CreateTable(create_table);
+                tableCreateBean.createTable(create_table);
                 request.setAttribute("doesNotExist", TableCreate.doesNotExist);
                 request.setAttribute("error", TableCreate.error);
                 request.getRequestDispatcher("createtable.jsp").forward(request, response);
@@ -204,7 +211,7 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/delete")) {
             String delete_table = request.getParameter("delete_table");
             try {
-                TableDelete.DeleteTable(delete_table);
+                tableDeleteBean.deleteTable(delete_table);
                 request.setAttribute("doesNotExist", TableDelete.doesNotExist);
                 request.setAttribute("error", TableDelete.error);
                 request.getRequestDispatcher("deletetable.jsp").forward(request, response);
@@ -219,7 +226,7 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/tablesize")) {
             String name_table = request.getParameter("name_table");
             try {
-                tableSizeBean.GetTableSize(name_table);
+                tableSizeBean.getTableSize(name_table);
                 request.setAttribute("doesNotExist", TableSize.doesNotExist);
                 request.setAttribute("error", TableSize.error);
                 request.setAttribute("size", TableSize.size);
@@ -234,7 +241,7 @@ public class MainServlet extends HttpServlet {
 
         if (action.startsWith("/showtables")) {
             try {
-                tableNamesBean.GetAllTableNames();
+                tableNamesBean.getAllTableNames();
                 request.setAttribute("doesNotExist", TableNames.doesNotExist);
                 request.setAttribute("error", TableNames.error);
                 request.setAttribute("tableNames", TableNames.toString(TableNames.tables));

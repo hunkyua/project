@@ -33,7 +33,7 @@ public class TableNames {
         }
     }
 
-    public void GetAllTableNames() throws ClassNotFoundException, SQLException {
+    public void getAllTableNames() throws ClassNotFoundException, SQLException {
         Statement statement = null;
         try {
             doesNotExist = "";

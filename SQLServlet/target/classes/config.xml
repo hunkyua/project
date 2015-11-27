@@ -18,4 +18,14 @@
     </bean>
     <bean id="tableCreate" class="sqlcmd.command.table.TableCreate">
     </bean>
+    <bean id="tableDelete" class="sqlcmd.command.table.TableDelete">
+    </bean>
+    <bean id="recordDelete" class="sqlcmd.command.crud.RecordDelete">
+    </bean>
+    <bean id="recordInsert" class="sqlcmd.command.crud.RecordInsert">
+    </bean>
+    <bean id="recordSelect" class="sqlcmd.command.crud.RecordSelect">
+    </bean>
+    <bean id="recordUpdate" class="sqlcmd.command.crud.RecordUpdate">
+    </bean>
 </beans>

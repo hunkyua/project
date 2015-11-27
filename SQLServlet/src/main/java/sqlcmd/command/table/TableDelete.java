@@ -11,7 +11,8 @@ import java.sql.Statement;
 public class TableDelete {
     public static String error = "";
     public static String doesNotExist = "";
-    public static void DeleteTable (String tableName) throws ClassNotFoundException, SQLException {
+
+    public void deleteTable(String tableName) throws ClassNotFoundException, SQLException {
         Statement statement = null;
         String deleteTableSQL = "DROP TABLE " + tableName;
 

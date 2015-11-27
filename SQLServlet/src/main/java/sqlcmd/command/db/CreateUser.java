@@ -11,7 +11,7 @@ import java.sql.Statement;
 public class CreateUser {
     public static String error = "";
     public static String doesNotExist = "";
-    public static void UserCreate(String username, String password) throws SQLException, ClassNotFoundException {
+    public static void userCreate(String username, String password) throws SQLException, ClassNotFoundException {
         Statement statement = null;
 
         String createUser = "CREATE USER " + username + " PASSWORD " + "'" + password + "'";
