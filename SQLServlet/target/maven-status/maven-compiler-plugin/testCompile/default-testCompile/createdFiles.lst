@@ -1,0 +1,14 @@
+ua\com\hunkyua\sqlcmd\dao\crud\RecordSelectTest.class
+ua\com\hunkyua\sqlcmd\ConsoleMock$ConfigurableInputStream.class
+ua\com\hunkyua\sqlcmd\ConsoleMock.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordInsertTest.class
+ua\com\hunkyua\sqlcmd\dao\table\TableCreateTest.class
+ua\com\hunkyua\sqlcmd\JDBCConnectorTest.class
+ua\com\hunkyua\sqlcmd\dao\db\CreateDBTest.class
+ua\com\hunkyua\sqlcmd\dao\table\TableNamesTest.class
+ua\com\hunkyua\sqlcmd\dao\table\TableDeleteTest.class
+ua\com\hunkyua\sqlcmd\dao\db\ShowDBTest.class
+ua\com\hunkyua\sqlcmd\IntegrationTest.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordDeleteTest.class
+ua\com\hunkyua\sqlcmd\dao\table\TableSizeTest.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordUpdateTest.class

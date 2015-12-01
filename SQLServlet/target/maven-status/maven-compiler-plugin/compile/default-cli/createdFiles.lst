@@ -1,0 +1,14 @@
+ua\com\hunkyua\sqlcmd\dao\JDBCConnector.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordSelect.class
+ua\com\hunkyua\sqlcmd\dao\ClearAllData.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordDelete.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordUpdate.class
+ua\com\hunkyua\sqlcmd\dao\table\TableCreate.class
+ua\com\hunkyua\sqlcmd\web\MainServlet.class
+ua\com\hunkyua\sqlcmd\dao\db\CreateUser.class
+ua\com\hunkyua\sqlcmd\dao\table\TableDelete.class
+ua\com\hunkyua\sqlcmd\dao\db\ShowDB.class
+ua\com\hunkyua\sqlcmd\dao\db\CreateDB.class
+ua\com\hunkyua\sqlcmd\dao\crud\RecordInsert.class
+ua\com\hunkyua\sqlcmd\dao\table\TableSize.class
+ua\com\hunkyua\sqlcmd\dao\table\TableNames.class

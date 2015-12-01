@@ -1,0 +1,38 @@
+body {
+    background-color:  #1F1F1F;
+    color: yellow;
+}
+p {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:140%;
+    text-align: center;
+}
+a {
+    font-size:140%;
+    text-align: center;
+}
+a:link{
+    color: yellow;
+}
+
+a:hover{
+    color: green;
+}
+a:visited {
+    color:darkslateblue ;
+}
+td {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:140%;
+    text-align: center;
+}
+p#error {
+     color: red;
+ }
+
+p#footer {
+    font-family: 'Times New Roman', Times, serif;
+    font-size:140%;
+    text-align: center;
+    color: yellow;
+}
