@@ -4,28 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans 
                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="rat" class="sqlcmd.spring.LabRat">
-        <constructor-arg value="Hi!"/>
-        <property name="name" value="Alice"/>
+
+    <bean id="clear" class="ua.com.hunkyua.sqlcmd.dao.ClearAllData">
     </bean>
 
-    <bean id="clear" class="sqlcmd.ClearAllData">
+    <bean id="JDBCConnector" class="ua.com.hunkyua.sqlcmd.dao.JDBCDatabaseManager">
     </bean>
 
-    <bean id="tableNames" class="sqlcmd.command.table.TableNames">
-    </bean>
-    <bean id="tableSize" class="sqlcmd.command.table.TableSize">
-    </bean>
-    <bean id="tableCreate" class="sqlcmd.command.table.TableCreate">
-    </bean>
-    <bean id="tableDelete" class="sqlcmd.command.table.TableDelete">
-    </bean>
-    <bean id="recordDelete" class="sqlcmd.command.crud.RecordDelete">
-    </bean>
-    <bean id="recordInsert" class="sqlcmd.command.crud.RecordInsert">
-    </bean>
-    <bean id="recordSelect" class="sqlcmd.command.crud.RecordSelect">
-    </bean>
-    <bean id="recordUpdate" class="sqlcmd.command.crud.RecordUpdate">
-    </bean>
 </beans>
