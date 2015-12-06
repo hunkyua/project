@@ -4,16 +4,6 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/ClearAllData.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/JDBCDatabaseManager.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/crud/RecordDelete.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/crud/RecordInsert.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/crud/RecordSelect.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/crud/RecordUpdate.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/db/CreateDB.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/db/CreateUser.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/table/TableCreate.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/table/TableDelete.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/table/TableNames.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/dao/table/TableSize.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/ua/com/hunkyua/sqlcmd/web/MainServlet.java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>

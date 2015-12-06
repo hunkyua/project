@@ -20,7 +20,7 @@
   <form action="tablesize" method="get">
     <tr>
       <td>Table name:</td>
-      <td><input name ='name_table' type="text"/></td>
+      <td><input name ='tableName' type="text"/></td>
     </tr>
     <tr>
       <td></td>
@@ -31,7 +31,7 @@
 <p>${size}</p>
 
 
-<p id="error">${doesNotExist}</p>
+<p style="color: crimson" id="doesNotExist">${doesNotExist}</p>
 <p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp" %>
 </body>

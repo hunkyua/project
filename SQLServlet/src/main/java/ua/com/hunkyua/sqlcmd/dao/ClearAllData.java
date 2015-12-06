@@ -11,8 +11,8 @@ public class ClearAllData {
         JDBCDatabaseManager.error = "";
         JDBCDatabaseManager.doesNotExist = "";
 
-        JDBCDatabaseManager.list = new ArrayList<>() ;
-        JDBCDatabaseManager.tables = new String[]{"*Please enter Show tables*"};
-        JDBCDatabaseManager.size = "";
+//        JDBCDatabaseManager.list = new ArrayList<>() ;
+//        JDBCDatabaseManager.tables = new String[]{"*Please enter Show tables*"};
+//        JDBCDatabaseManager.size = "";
     }
 }

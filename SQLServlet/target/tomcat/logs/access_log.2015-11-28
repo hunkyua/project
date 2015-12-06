@@ -1,4 +1,0 @@
-127.0.0.1 - - [28/Nov/2015:02:59:48 +0200] "GET / HTTP/1.1" 200 441 http-bio-8080-exec-1 2963
-127.0.0.1 - - [28/Nov/2015:02:59:48 +0200] "GET /css/style.css HTTP/1.1" 200 705 http-bio-8080-exec-2 23
-127.0.0.1 - - [28/Nov/2015:02:59:53 +0200] "GET /connect.jsp HTTP/1.1" 200 927 http-bio-8080-exec-3 521
-127.0.0.1 - - [28/Nov/2015:02:59:56 +0200] "POST /connect HTTP/1.1" 500 1587 http-bio-8080-exec-4 1150

@@ -19,7 +19,7 @@
   <form action="createTable" method="get">
     <tr>
       <td>Name of table:</td>
-      <td><input name ='create_table' type="text"/></td>
+      <td><input name ='tableName' type="text"/></td>
     </tr>
     <tr>
       <td></td>
@@ -29,8 +29,8 @@
 
 </table>
 
-<p id="doesNotExist">${doesNotExist}</p>
-<p id="error">${error}</p>
+<p id="exist">${exist}</p>
+<p style="color: crimson" id="doesNotExist">${doesNotExist}</p>
 <p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp" %>
 </body>

@@ -18,7 +18,7 @@
   <form action="selectrecord" method="post">
     <tr>
       <td>Name of table</td>
-      <td><input name ='table_name' type="text"/></td>
+      <td><input name ='tableName' type="text"/></td>
     </tr>
     <tr>
       <td>Select</td>
@@ -40,8 +40,8 @@
   </tr>
 </table>
 
-
-<p id="error">${doesNotExist}</p>
+<p id="exist">${exist}</p>
+<p style="color: crimson" id="doesNotExist">${doesNotExist}</p>
 <p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp" %>
 </body>

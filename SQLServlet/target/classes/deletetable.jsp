@@ -18,7 +18,7 @@
   <form action="deleteTable" method="get">
     <tr>
       <td>Name of tables:</td>
-      <td><input name ='delete_table' type="text"/></td>
+      <td><input name ='tableName' type="text"/></td>
     </tr>
     <tr>
       <td></td>
@@ -27,8 +27,9 @@
   </form>
 </table>
 
-<p id="err">${err}</p>
-<p><a href="/connect.jsp" style="color: crimson">${err}</a></p>
+<p id="exist">${exist}</p>
+<p style="color: crimson" id="doesNotExist">${doesNotExist}</p>
+<p><a href="/connect.jsp" style="color: crimson">${error}</a></p>
 <%@include file="footer.jsp"%>
 </body>
 </html>

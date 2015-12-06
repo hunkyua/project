@@ -21,7 +21,7 @@
 
   <h1 align="center">Welcome to DB Manager</h1>
   <p><a href="connect.jsp">Connect to DB</a></p>
-  <p><a href="createuser.jsp" style="font-size: 120%">Create new User</a></p><br>
+  <p><a href="registration.jsp" style="font-size: 120%">Create new User</a></p><br>
   <p><a href="help.jsp" style="color: greenyellow">Help</a></p>
   <p id="footer">Copyright 2015 Hunkbl4:)</p>
 

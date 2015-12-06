@@ -40,9 +40,9 @@
 </table>
 
 
-
+<p id="created">${created}</p>
 <p style="color: crimson" id="message">${message}</p>
-<p><a href="/createuser.jsp" style="color: crimson">${er_connect}</a></p>
+<p><a href="/registration.jsp" style="color: crimson">${registerError}</a></p>
 
 <p><a href="index.jsp">Back</a></p>
 
