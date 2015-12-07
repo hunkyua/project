@@ -14,12 +14,6 @@ public class JDBCDatabaseManager implements DatabaseManager {
     private static final String DATABASE_DRIVER = "org.postgresql.Driver";
     private static final String DATABASE_URL = "jdbc:postgresql://localhost:5432/";
 
-    public static String error = "";
-    public static String doesNotExist = "";
-
-    public static String error_connect = "";
-
-
     @Override
     public void connect(String name, String user, String password) throws IOException {
         try {
@@ -199,8 +193,6 @@ public class JDBCDatabaseManager implements DatabaseManager {
     public List<String> dbShow() {
         List<String> result = new ArrayList<>();
         try (Statement statement = connection.createStatement()) {
-            doesNotExist = "";
-            error = "";
             String showDB = "SELECT datname FROM pg_database WHERE datistemplate = false;";
             statement.execute(showDB);
             ResultSet rs = statement.executeQuery(showDB);
@@ -209,10 +201,8 @@ public class JDBCDatabaseManager implements DatabaseManager {
                 result.add(res);
             }
         } catch (SQLException e) {
-            doesNotExist = e.getMessage();
-            if (doesNotExist.equals("Сервер запросил парольную аутентификацию, но пароль не был указан.")) {
-                error = ">>> Please Connect to DB";
-            }
+            throw new RuntimeException(e.getMessage());
+
         }
         return result;
     }

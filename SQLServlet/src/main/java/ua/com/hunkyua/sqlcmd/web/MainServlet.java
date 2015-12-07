@@ -1,7 +1,6 @@
 package ua.com.hunkyua.sqlcmd.web;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import ua.com.hunkyua.sqlcmd.dao.ClearAllData;
 import ua.com.hunkyua.sqlcmd.dao.JDBCDatabaseManager;
 
 import javax.servlet.ServletException;
@@ -16,7 +15,6 @@ import java.io.IOException;
 public class MainServlet extends HttpServlet {
 
     ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(new String[]{"config.xml"});
-    ClearAllData clearAllDataBean = (ClearAllData) context.getBean("clear");
     JDBCDatabaseManager jdbcDatabaseManager = (JDBCDatabaseManager) context.getBean("JDBCConnector");
 
 
@@ -28,7 +26,6 @@ public class MainServlet extends HttpServlet {
             String name = request.getParameter("name");
             String user = request.getParameter("user");
             String password = request.getParameter("password");
-            clearAllDataBean.clear();
             try {
                 jdbcDatabaseManager.connect(name, user, password);
                 response.sendRedirect(response.encodeRedirectURL("menu.jsp"));
@@ -44,7 +41,6 @@ public class MainServlet extends HttpServlet {
             String dbName = request.getParameter("dbName");
             String user = request.getParameter("user");
             String password = request.getParameter("password");
-            clearAllDataBean.clear();
             try {
                 jdbcDatabaseManager.connect("postgres", "postgres", "1336");
                 jdbcDatabaseManager.userCreate(user, password);
@@ -105,7 +101,6 @@ public class MainServlet extends HttpServlet {
         if (action.startsWith("/selectrecord")) {
             String tableName = request.getParameter("tableName");
             String select = request.getParameter("select");
-            clearAllDataBean.clear();
             try {
                 jdbcDatabaseManager.selectRecordInTable(tableName, select);
                 request.setAttribute("exist", String.format("Record in table:\"%s\"", tableName));

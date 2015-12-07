@@ -5,9 +5,6 @@
                            http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-    <bean id="clear" class="ua.com.hunkyua.sqlcmd.dao.ClearAllData">
-    </bean>
-
     <bean id="JDBCConnector" class="ua.com.hunkyua.sqlcmd.dao.JDBCDatabaseManager">
     </bean>
 

@@ -1,4 +1,3 @@
 ua\com\hunkyua\sqlcmd\web\MainServlet.class
 ua\com\hunkyua\sqlcmd\dao\DatabaseManager.class
 ua\com\hunkyua\sqlcmd\dao\JDBCDatabaseManager.class
-ua\com\hunkyua\sqlcmd\dao\ClearAllData.class
