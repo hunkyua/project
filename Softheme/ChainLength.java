@@ -3,10 +3,10 @@ import java.io.*;
 /**
  * Created by Hunky_ua on 16.05.2016.
  */
-public class ChaineLength {
+public class ChainLength {
     public static void main(String[] args) throws IOException {
-        ChaineLength chaineLength = new ChaineLength();
-        chaineLength.start();
+        ChainLength chainLength = new ChainLength ();
+        chainLength.start();
     }
 
     void start() throws IOException {
