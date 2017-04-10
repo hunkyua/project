@@ -1,3 +1,6 @@
+/**
+ * Created by Opanasiuk Valentyn on 07.04.17.
+ */
 public class House {
 
     private Floor[] floors;
