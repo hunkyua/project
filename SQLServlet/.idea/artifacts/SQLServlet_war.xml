@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="SQLServlet:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="BDManager.war">
-      <element id="artifact" artifact-name="SQLServlet:war exploded" />
-    </root>
-  </artifact>
-</component>
