@@ -1,13 +1,14 @@
+import equipment.Owner;
+
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.
  */
-public class Apartment {
+public class LivingApartment extends AbstractApartment {
 
-    private int number;
     private Owner[] owners;
 
-    public Apartment(int number, int capacity) {
-        this.number = number;
+    public LivingApartment(int number, int capacity) {
+        super(number);
         this.owners = new Owner[capacity];
     }
 
@@ -17,12 +18,12 @@ public class Apartment {
 
     @Override
     public String toString() {
-        String result = "Apartment number " + number + "\n";
+        String result = super.toString();
         for (int index = 0; index < owners.length; index++) {
             Owner owner = owners[index];
             if (owner != null ){
                 result += "***********\n";
-                result += "Owner: " + owner.toString() + "\n";
+                result += "equipment.Owner: " + owner.toString() + "\n";
                 result += "***********\n";
             }
         }
@@ -38,6 +39,7 @@ public class Apartment {
         throw new RuntimeException("No free rooms for owner");
     }
 
+    @Override
     public boolean isFree() {
         return owners[owners.length - 1] == null;
     }

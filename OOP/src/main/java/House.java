@@ -1,3 +1,5 @@
+import equipment.Owner;
+
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.
  */
@@ -24,7 +26,7 @@ public class House {
 
     public void settle(Owner owner) {
         for (Floor floor : floors) {
-           Apartment apartment =  floor.getFreeApartment();
+            LivingApartment apartment =  floor.getFreeApartment();
            if(apartment != null) {
                apartment.addOwner(owner);
                break;

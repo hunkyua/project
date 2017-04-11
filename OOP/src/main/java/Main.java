@@ -1,3 +1,5 @@
+import equipment.Owner;
+
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.
  */

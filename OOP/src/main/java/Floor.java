@@ -4,20 +4,21 @@
 public class Floor {
     private static final int DEFAULT_APARTMENT_CAPACITY = 4;
     private int number;
-    private Apartment[] apartments;
+    private AbstractApartment[] apartments;
 
-    public Floor(int number, int apartmentssCount, NumberGenerator numbers) {
+    public Floor(int number, int apartmentsCount, NumberGenerator numbers) {
         this.number = number;
-        this.apartments = new Apartment[apartmentssCount];
-        for (int index = 0; index < apartmentssCount; index++) {
-            apartments[index] = new Apartment(numbers.getNext(), DEFAULT_APARTMENT_CAPACITY);
+        this.apartments = new AbstractApartment[apartmentsCount];
+        this.apartments[0] = new TechnicalApartment(numbers.getNext());
+        for (int index = 1; index < apartmentsCount; index++) {
+            apartments[index] = new LivingApartment(numbers.getNext(), DEFAULT_APARTMENT_CAPACITY);
         }
     }
 
-    public Apartment getFreeApartment() {
-       for (Apartment apartment : apartments) {
-           if (apartment.isFree()) {
-               return apartment;
+    public LivingApartment getFreeApartment() {
+       for (AbstractApartment apartment : apartments) {
+           if (apartment instanceof LivingApartment && apartment.isFree()) {
+               return (LivingApartment) apartment;
            }
        }
        return null;
@@ -28,7 +29,7 @@ public class Floor {
         String result = "============================\n";
         result += "Floor number " + number + "\n";
         result += "----------------------------\n";
-        for (Apartment apartment: apartments) {
+        for (AbstractApartment apartment: apartments) {
             result += apartment.toString() + "\n";
         }
         result += "============================\n";
