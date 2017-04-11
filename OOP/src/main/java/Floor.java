@@ -2,14 +2,15 @@
  * Created by Opanasiuk Valentyn on 07.04.17.
  */
 public class Floor {
+    private static final int DEFAULT_APARTMENT_CAPACITY = 4;
     private int number;
     private Apartment[] apartments;
 
-    public Floor(int number, int floorsCount) {
+    public Floor(int number, int apartmentssCount, NumberGenerator numbers) {
         this.number = number;
-        this.apartments = new Apartment[floorsCount];
-        for (int index = 0; index < floorsCount; index++) {
-            apartments[index] = new Apartment(index + 1);
+        this.apartments = new Apartment[apartmentssCount];
+        for (int index = 0; index < apartmentssCount; index++) {
+            apartments[index] = new Apartment(numbers.getNext());
         }
     }
 

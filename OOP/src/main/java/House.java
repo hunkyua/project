@@ -4,11 +4,13 @@
 public class House {
 
     private Floor[] floors;
+    private NumberGenerator numbers;
 
     public House(int floorsCount, int apartmentsOnFloor) {
+        numbers = new NumberGenerator();
         floors = new Floor[floorsCount];
         for (int index = 0; index < floorsCount; index++) {
-            floors[index] = new Floor(index + 1, apartmentsOnFloor);
+            floors[index] = new Floor(index + 1, apartmentsOnFloor, numbers);
         }
     }
 
