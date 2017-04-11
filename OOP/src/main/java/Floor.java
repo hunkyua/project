@@ -1,6 +1,7 @@
 import apartment.Apartment;
 import apartment.LivingApartment;
 import apartment.TechnicalApartment;
+import staff.Cleaner;
 
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.
@@ -9,6 +10,7 @@ public class Floor {
     private static final int DEFAULT_APARTMENT_CAPACITY = 4;
     private int number;
     private Apartment[] apartments;
+    private Cleaner cleaner;
 
     public Floor(int number, int apartmentsCount, NumberGenerator numbers) {
         this.number = number;
@@ -22,7 +24,11 @@ public class Floor {
     public LivingApartment getFreeApartment() {
        for (Apartment apartment : apartments) {
            if (apartment instanceof LivingApartment && apartment.isFree()) {
-               return (LivingApartment) apartment;
+               LivingApartment livingApartment = (LivingApartment) apartment;
+               if (!livingApartment.isSettled()) {
+                   cleaner.clean(apartment);
+               }
+               return livingApartment;
            }
        }
        return null;
@@ -38,5 +44,9 @@ public class Floor {
         }
         result += "============================\n";
         return result;
+    }
+
+    public void setCleaner(Cleaner cleaner) {
+        this.cleaner = cleaner;
     }
 }

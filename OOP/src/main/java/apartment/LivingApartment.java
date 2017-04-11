@@ -37,11 +37,15 @@ public class LivingApartment extends Apartment {
                 return index;
             }
         }
-        throw new RuntimeException("No free rooms for owner");
+        throw new RuntimeException("No free rooms for owner!!!");
     }
 
     @Override
     public boolean isFree() {
         return owners[owners.length - 1] == null;
+    }
+
+    public boolean isSettled() {
+        return owners[0] != null;
     }
 }
