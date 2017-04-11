@@ -1,11 +1,13 @@
+package apartment;
+
 /**
  * Created by Opanasiuk Valentyn on 11.04.17.
  */
-public class AbstractApartment {
+public abstract class Apartment {
 
     private int number;
 
-    public AbstractApartment(int number) {
+    public Apartment(int number) {
         this.number = number;
     }
 

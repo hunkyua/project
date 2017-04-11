@@ -6,6 +6,6 @@ package equipment;
 public abstract class Equipment {
     @Override
     public String toString() {
-        return "equipment.Equipment " + this.getClass().toString();
+        return "Equipment " + this.getClass().getSimpleName();
     }
 }

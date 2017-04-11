@@ -1,4 +1,4 @@
-package equipment;
+package owner;
 
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.

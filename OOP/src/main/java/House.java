@@ -1,4 +1,5 @@
-import equipment.Owner;
+import apartment.LivingApartment;
+import owner.Owner;
 
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.

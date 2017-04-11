@@ -1,3 +1,5 @@
+package apartment;
+
 import equipment.Bucket;
 import equipment.Equipment;
 import equipment.Extinguisher;
@@ -8,7 +10,7 @@ import java.util.Arrays;
 /**
  * Created by Opanasiuk Valentyn on 11.04.17.
  */
-public class TechnicalApartment extends AbstractApartment {
+public class TechnicalApartment extends Apartment {
 
     private Equipment[] equipments;
 

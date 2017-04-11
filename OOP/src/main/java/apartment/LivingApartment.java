@@ -1,9 +1,10 @@
-import equipment.Owner;
+package apartment;
 
+import owner.Owner;
 /**
  * Created by Opanasiuk Valentyn on 07.04.17.
  */
-public class LivingApartment extends AbstractApartment {
+public class LivingApartment extends Apartment {
 
     private Owner[] owners;
 
@@ -23,14 +24,14 @@ public class LivingApartment extends AbstractApartment {
             Owner owner = owners[index];
             if (owner != null ){
                 result += "***********\n";
-                result += "equipment.Owner: " + owner.toString() + "\n";
+                result += "owner.Owner: " + owner.toString() + "\n";
                 result += "***********\n";
             }
         }
         return result;
     }
 
-    public int getFreeRoomIndex() {
+    private int getFreeRoomIndex() {
         for (int index = 0; index < owners.length; index++) {
             if (owners[index] == null) {
                 return index;
