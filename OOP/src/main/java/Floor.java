@@ -10,12 +10,17 @@ public class Floor {
         this.number = number;
         this.apartments = new Apartment[apartmentssCount];
         for (int index = 0; index < apartmentssCount; index++) {
-            apartments[index] = new Apartment(numbers.getNext());
+            apartments[index] = new Apartment(numbers.getNext(), DEFAULT_APARTMENT_CAPACITY);
         }
     }
 
     public Apartment getFreeApartment() {
-        return null; //TODO implement me
+       for (Apartment apartment : apartments) {
+           if (apartment.isFree()) {
+               return apartment;
+           }
+       }
+       return null;
     }
 
     @Override

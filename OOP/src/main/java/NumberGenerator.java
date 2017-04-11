@@ -1,5 +1,5 @@
 /**
- * Created by Hunky on 4/11/2017.
+ * Created by Opanasiuk Valentyn on 07.04.17.
  */
 public class NumberGenerator {
     private int current;
