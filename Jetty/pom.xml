@@ -3,26 +3,19 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-<<<<<<< HEAD
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-=======
-
->>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
     <groupId>1</groupId>
     <artifactId>1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
-<<<<<<< HEAD
             <groupId>org.apache.tomcat.embed</groupId>
             <artifactId>tomcat-embed-core</artifactId>
-            <version>8.0.28</version>
+            <version>10.1.0-M15</version>
         </dependency>
         <dependency>
-=======
->>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
             <version>2.5</version>
@@ -39,13 +32,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-<<<<<<< HEAD
                     <source>1.8</source>
                     <target>1.8</target>
-=======
-                    <source>1.7</source>
-                    <target>1.7</target>
->>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
                 </configuration>
             </plugin>
             <plugin>
@@ -55,13 +43,8 @@
                 <configuration>
                     <url>http://localhost:8080/manager</url>
                     <server>localhost</server>
-<<<<<<< HEAD
                     <username>hunky</username>
                     <password>1336</password>
-=======
-                    <!--<username>hunky</username>-->
-                    <!--<password>1336</password>-->
->>>>>>> 5ffe19921aa3f3d411e2a3309ae4df21f5dc99bf
                 </configuration>
             </plugin>
         </plugins>
